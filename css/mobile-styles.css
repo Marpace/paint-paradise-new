@@ -3,8 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    font-family: "Roboto", sans-serif;
+html,body
+{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden; 
+  font-family: "Roboto", sans-serif;
 }
 .purple-title {
     font-size: 2rem;
@@ -24,7 +30,7 @@ body {
 .nav-brand {
     height: 60px;
     width: 60px;
-    background-image: url(../Images/paint-splatter.png);
+    background-image: url("../images/paint-splatter.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -108,11 +114,12 @@ body {
 }
 .heading-background-purple {
     height: 60vh;
-    background-image: url(../Images/hero-background-purple.svg);
+    background-image: url(../images/hero-background-purple.svg);
+    background-size: auto;
 } 
 .heading-background-blue {
     height: 57vh;
-    background-image: url(../Images/hero-background-blue.svg);
+    background-image: url("../images/hero-background-blue.svg");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,7 +172,7 @@ body {
     margin: 0 0 15px 0;
 }
 .item-icon-1 {
-    background-image: url(../Images/stress-free-icon.png);
+    background-image: url("../images/stress-free-icon.png");
 }
 .item-text p {
     font-size: 23px;
@@ -196,7 +203,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 55vh;
-  background-image: url(../Images/services-background.png);
+  background-image: url("../images/services-background.png");
   width: 90%;
   border-radius: 10px;
 }
