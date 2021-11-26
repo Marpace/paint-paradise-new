@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+}
+.purple-title {
+    font-size: 2rem;
+    font-family: "Dela Gothic One";
+    color: #5B28B5;   
+}
+
+
+/* ****************** NAVBAR ******************* */
+.navbar {
+    display: flex;
+    height: 100px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-brand {
+    height: 60px;
+    width: 60px;
+    background-image: url(../Images/PaintSplatter.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.navbar-toggler {
+    height: 40px;
+    width: 40px;
+    position: relative;
+}
+.toggler-div {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 2px;
+    background: black;
+    transition: 0.2s;
+}
+#toggler-div-1 {
+    top: 0px;
+}
+#toggler-div-2{
+    top: 15px;
+    transition: .4s;
+}
+#toggler-div-3{
+    top: 30px;
+}
+.collapsed-nav {
+    height: 0px;
+    background: #1D1330;
+    overflow: hidden;
+    transition: .4s;
+}
+.nav-links {
+    padding: 120px 30px;
+}
+.nav-link {
+    margin: 50px 0;
+
+}
+.nav-link h2 {
+    color: white;
+    font-weight: lighter;
+}
+.services-nav-link {
+    display: flex;
+    align-items: center;
+}
+.services-nav-link i {
+    color: white;
+    margin: 0 0 0 10px;
+    transform: rotate(180deg);
+    transition: .2s;
+}
+.drop-down-menu {
+    height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+.drop-down-link {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.drop-down-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    background: white;
+    margin: 0 10px 0 0;
+}
+.drop-down-link h3 {
+    color: white;
+    font-weight: lighter;
+}
+
+
+/* ****************** HEADING ********************* */
+
+.heading {
+    height: 70vh;
+}
+.heading-background-purple {
+    height: 60vh;
+    background: url(../Images/purple.svg);
+} 
+.heading-background-blue {
+    height: 57vh;
+    background: url(../Images/blue.svg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+} 
+.heading-title {
+    text-align: center;
+    transform: rotate(-3deg);
+    margin: 0 0 30px;
+}
+.heading-text {
+    width: 70%;
+    text-align: center;
+    margin: 0 0 35px;
+}
+.heading-text p {
+    font-size: 23px;
+    line-height: 1.4;
+}
+.heading-button button {
+    padding: 20px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background: #5B28B5;
+}
+
+/* ************************ LOVE ****************** */
+
+#love {
+    padding: 30px;
+}
+.love-title {
+    text-align: center;
+    transform: rotate(1deg);
+}
+.love-title h1 {
+    font-size: 30px;
+}
+.love-item {
+    margin: 50px 0;
+}
+.item-icon {
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    background: grey;
+    background-size: contain;
+    margin: 0 0 15px 0;
+}
+.item-icon-1 {
+    background-image: url(../Images/stress\ free\ icon.png);
+}
+.item-text p {
+    font-size: 23px;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+/* *************** SERVICES ***************  */
+.services-title h1 {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+}
+.card-title,
+.card-text,
+.card-button {
+  text-align: center;
+  margin: 20px 0;
+}
+.services {
+  height: 130vh;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.services-background {
+    position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 55vh;
+  background-image: url(../Images/services\ background.png);
+  width: 90%;
+  border-radius: 10px;
+}
+.services-card {
+  position: absolute;
+  top: 160px;
+  width: 90%;
+  height: 50vh;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 7px 10px;
+  transition: .3s;
+}
+.card-button button {
+  border: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-size: 25px;
+  color: white;
+  background: #5B28B5;
+  margin-top: 20px;
+}
+.left-card {
+    left: -100px;
+    opacity: 0;
+}
+.middle-card {
+    opacity: 1;
+   left: 5%;
+}
+.right-card {
+  left: 100px;
+  opacity: 0;
+}
+.controls {
+  width: 85%;
+}
+.selectors {
+  display: flex;
+  width: 100%;
+  margin-top: 170px;
+  justify-content: space-between;
+}
+.selector-div {
+  height:8px;
+  width: 30%;
+  border-radius: 50px;
+  background: #EBEBEB;
+}
+.selector-active {
+  background: #1D1330;
+}
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.arrows div {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  background: #efdaf5;
+  cursor: pointer;
+}
+#arrow-left div,
+#arrow-right div {
+  position: absolute;
+  height: 4px;
+  background: black;
+  border-radius: 50px;
+}
+#arrow-left-1,
+#arrow-left-2,
+#arrow-right-1,
+#arrow-right-2 {
+  width: 20px;
+}
+#arrow-left-3,
+#arrow-right-3 {
+  width: 30px;
+}
+
+#arrow-left-1 {
+  top: 26px;
+  left: 14px;
+  transform: rotate(-45deg);
+  transform-origin: top left;
+}
+#arrow-left-2 {
+  top: 26px;
+  left: 14px;
+  transform: rotate(45deg);
+  transform-origin: bottom left;
+}
+#arrow-left-3 {
+  top: 26px;
+  left: 14px;
+}
+#arrow-right-1 {
+  top: 26px;
+  right: 14px;
+  transform: rotate(-45deg);
+  transform-origin: top right;
+}
+#arrow-right-2 {
+  top: 26px;
+  right: 14px;
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+}
+#arrow-right-3 {
+  top: 26px;
+  right: 14px;
+}
+/* ****************  TESTIMONIALS  ********************** */
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonial-cards {
+    width: 90%;
+    height: 30vh;
+    position: relative;
+  }
+  .testimonial-card {
+    position: absolute;
+    padding: 0 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 90%;
+    transition: 0.3s;
+  }
+  .test-middle {
+    transform: translateY(-10px);
+    left: 5%;
+  }
+  .test-left {
+    left: -90%;
+  }
+  .test-right {
+    left: 100%;
+  }
+  .prev-btn div,
+  .next-btn div {
+    position: absolute;
+    height: 4px;
+    background: black;
+    border-radius: 50px;
+  }
