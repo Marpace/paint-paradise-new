@@ -12,15 +12,18 @@ const togglerDivs = [...document.querySelectorAll(".toggler-div")];
 const navMenu = document.querySelector(".collapsed-nav");
 const navLinks = document.querySelector(".nav-links");
 
+
 //Drop down menu
 const dropDownArrow = document.querySelector(".services-nav-link i");
 const dropDownMenu = document.querySelector(".drop-down-menu");
+
 
 //Services section 
 const arrowLeft = document.querySelector(".prev-btn");
 const arrowRight = document.querySelector(".next-btn");
 const cards = [...document.querySelectorAll(".services-card")];
 const selectors = [...document.querySelectorAll(".services-indicators-div")];
+
 
 //Testimonials section 
 const prevBtn = document.querySelector(".carousel-prev-btn");

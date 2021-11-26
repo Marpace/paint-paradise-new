@@ -24,7 +24,7 @@ body {
 .nav-brand {
     height: 60px;
     width: 60px;
-    background-image: url(../Images/PaintSplatter.png);
+    background-image: url(../Images/paint-splatter.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -108,11 +108,11 @@ body {
 }
 .heading-background-purple {
     height: 60vh;
-    background: url(../Images/purple.svg);
+    background-image: url(../Images/hero-background-purple.svg);
 } 
 .heading-background-blue {
     height: 57vh;
-    background: url(../Images/blue.svg);
+    background-image: url(../Images/hero-background-blue.svg);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -165,7 +165,7 @@ body {
     margin: 0 0 15px 0;
 }
 .item-icon-1 {
-    background-image: url(../Images/stress\ free\ icon.png);
+    background-image: url(../Images/stress-free-icon.png);
 }
 .item-text p {
     font-size: 23px;
@@ -196,7 +196,7 @@ body {
   display: flex;
   justify-content: center;
   min-height: 55vh;
-  background-image: url(../Images/services\ background.png);
+  background-image: url(../Images/services-background.png);
   width: 90%;
   border-radius: 10px;
 }
@@ -242,7 +242,7 @@ body {
   margin-top: 170px;
   justify-content: space-between;
 }
-.selector-div {
+.services-indicators-div {
   height:8px;
   width: 30%;
   border-radius: 50px;
