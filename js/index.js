@@ -1,8 +1,3 @@
-const screenWidth = document.documentElement.clientWidth;
-const setStyles = function(styleSheet){
-    document.getElementById("css").setAttribute("href", styleSheet);
-    console.log(screenWidth)
-}
 
 
 // Selecting elements 
@@ -26,33 +21,21 @@ const selectors = [...document.querySelectorAll(".services-indicators-div")];
 
 
 //Testimonials section 
-const prevBtn = document.querySelector(".carousel-prev-btn");
-const nextBtn = document.querySelector(".carousel-next-btn");
+const prevBtn = document.querySelector("#testimonial-prev-btn");
+const nextBtn = document.querySelector("#testimonial-next-btn");
 const testCards = [...document.querySelectorAll(".testimonial-card")];
 const indicators = [...document.querySelectorAll(".carousel-indicators-div")]
 
-console.log(dropDownMenu.clientHeight)
-
-if(screenWidth >= 992){
-    setStyles("css/desktop-styles.css")
-    
-    const toggleDropDown = function(){
-        if(dropDownMenu.clientHeight === 0 ){
-            dropDownMenu.style.height = "280px";
-            dropDownArrow.style.transform = "rotate(0deg)"
-        } else {
-            dropDownMenu.style.height = "0px";
-            dropDownArrow.style.transform = "rotate(180deg)"
-        }
-    }
-
-    dropDownArrow.addEventListener("click", function(){
-        toggleDropDown();
+window.onload = function (){
+    let delay = 0;
+    togglerDivs.forEach(div => {
+        setTimeout(() => {
+            div.style.width = "100%"
+        }, delay);
+        delay += 150;
     });
+};
 
-
-} else {
-    setStyles("css/mobile-styles.css")
 
             // Navbar toggler animation 
         const toggleMenu = function(){
@@ -121,14 +104,14 @@ if(screenWidth >= 992){
         let index = 0;
         const selectorSwitch = function() {
             selectors.forEach(selector =>{
-                selector.classList.remove("indicator-active");
+                selector.classList.remove("selector-active");
             });
             if(index >= 3){
                 index = 0;
             } else if(index <= -1){
                 index = 2;
             }
-            selectors[index].classList.add("indicator-active");
+            selectors[index].classList.add("selector-active");
         }
 
 
@@ -175,18 +158,18 @@ if(screenWidth >= 992){
         //new one
         let isAnimating = false;
 
-        // indicator switching 
+        //Indicator switching
         let indicatorIndex = 0;
         const indicatorSwitch = function() {
             indicators.forEach(indicator =>{
-                indicator.classList.remove("indicator-active");
+                indicator.classList.remove("selector-active");
             });
             if(indicatorIndex >= 3){
                 indicatorIndex = 0;
             } else if(indicatorIndex <= -1){
                 indicatorIndex = 2;
             }
-            indicators[indicatorIndex].classList.add("indicator-active");
+            indicators[indicatorIndex].classList.add("selector-active");
         }
 
 
@@ -238,7 +221,7 @@ if(screenWidth >= 992){
 
 
 
-}
+
 
 
 

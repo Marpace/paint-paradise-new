@@ -13,11 +13,18 @@ html,body
   font-family: "Roboto", sans-serif;
 }
 .purple-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: "Dela Gothic One";
-    color: #5B28B5;   
+    color: #5B28B5;  
+    text-align: center; 
+    margin: 0 0 30px 0;
 }
-
+.tilt-left {
+  transform: rotate(-1deg);
+}
+.tilt-right {
+  transform: rotate(1deg);
+}
 
 /* ****************** NAVBAR ******************* */
 .navbar {
@@ -42,7 +49,7 @@ html,body
 .toggler-div {
     position: absolute;
     height: 3px;
-    width: 100%;
+    width: 0;
     border-radius: 2px;
     background: black;
     transition: 0.2s;
@@ -52,7 +59,7 @@ html,body
 }
 #toggler-div-2{
     top: 15px;
-    transition: .4s;
+    /* transition: .4s; */
 }
 #toggler-div-3{
     top: 30px;
@@ -110,27 +117,51 @@ html,body
 /* ****************** HEADING ********************* */
 
 .heading {
-    height: 70vh;
+    height: 500px;
 }
 .heading-background-purple {
     height: 60vh;
-    background-image: url(../images/hero-background-purple.svg);
-    background-size: auto;
+    /* background-image: url("../images/hero-background-purple.svg"); */
+    background-repeat: no-repeat;
 } 
 .heading-background-blue {
+  position: relative;
     height: 57vh;
-    background-image: url("../images/hero-background-blue.svg");
+    background-color: #A9E7E2;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 50px 0;
 } 
+.wave {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  /* transform: rotate(180deg); */
+}
+
+.wave svg {
+width: 100%;
+height: 200px;
+  /* position: relative;
+  display: block;
+  width: calc(101% + 1.3px);
+  height: 51px; */
+}
+
 .heading-title {
+  z-index: 1000;
     text-align: center;
-    transform: rotate(-3deg);
-    margin: 0 0 30px;
+}
+.heading-title h1 {
+  font-size: 2rem;
 }
 .heading-text {
+  z-index: 1000;
     width: 70%;
     text-align: center;
     margin: 0 0 35px;
@@ -139,7 +170,14 @@ html,body
     font-size: 23px;
     line-height: 1.4;
 }
+.heading-button {
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  margin: 50px 0 0 0 ;
+}
 .heading-button button {
+    width: 80%;
     padding: 20px 30px;
     font-size: 18px;
     border: none;
@@ -155,10 +193,6 @@ html,body
 }
 .love-title {
     text-align: center;
-    transform: rotate(1deg);
-}
-.love-title h1 {
-    font-size: 30px;
 }
 .love-item {
     margin: 50px 0;
@@ -166,13 +200,10 @@ html,body
 .item-icon {
     height: 60px;
     width: 60px;
-    border-radius: 50px;
-    background: grey;
-    background-size: contain;
     margin: 0 0 15px 0;
 }
-.item-icon-1 {
-    background-image: url("../images/stress-free-icon.png");
+.item-icon-1 img {
+   width: 100%;
 }
 .item-text p {
     font-size: 23px;
@@ -181,10 +212,6 @@ html,body
 }
 
 /* *************** SERVICES ***************  */
-.services-title h1 {
-    font-size: 30px;
-    margin: 0 0 30px 0;
-}
 .card-title,
 .card-text,
 .card-button {
@@ -192,7 +219,7 @@ html,body
   margin: 20px 0;
 }
 .services {
-  height: 130vh;
+  height: 115vh;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -204,14 +231,15 @@ html,body
   justify-content: center;
   min-height: 55vh;
   background-image: url("../images/services-background.png");
+  background-size: cover;
   width: 90%;
   border-radius: 10px;
 }
 .services-card {
   position: absolute;
-  top: 160px;
+  top: 50%;
   width: 90%;
-  height: 50vh;
+  /* height: 50vh; */
   padding: 30px;
   border: 2px solid black;
   border-radius: 10px;
@@ -246,7 +274,7 @@ html,body
 .selectors {
   display: flex;
   width: 100%;
-  margin-top: 170px;
+  margin-top: 180px;
   justify-content: space-between;
 }
 .services-indicators-div {
@@ -254,9 +282,6 @@ html,body
   width: 30%;
   border-radius: 50px;
   background: #EBEBEB;
-}
-.selector-active {
-  background: #1D1330;
 }
 .arrows {
   display: flex;
@@ -358,3 +383,46 @@ html,body
     background: black;
     border-radius: 50px;
   }
+  .testimonial-selectors {
+    margin-top: 60px;
+  }
+  .carousel-indicators-div {
+    height:8px;
+  width: 30%;
+  border-radius: 50px;
+  background: #EBEBEB;
+  }
+  .selector-active {
+    background: #1D1330;
+  }
+
+/* ************* READY ********************* */
+
+.ready {
+  height: 370px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ready-div {
+  width: 60%;
+  position: relative;
+  z-index: 1000;
+}
+.ready-button {
+  text-align: center;
+}
+.ready-button button {
+  width: 80%;
+  padding: 20px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background: #5B28B5;
+}
+.ready-background{
+  position: absolute;
+  top: 0;
+}

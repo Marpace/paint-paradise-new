@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="css" rel="stylesheet" href="">
+    <link id="css" rel="stylesheet" href="css/mobile-styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Dela+Gothic+One&family=Montserrat:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
     <script
@@ -56,7 +56,7 @@
     <section class="heading">
         <div class="heading-background-purple">
             <div class="heading-background-blue">
-                <div class="heading-title">
+                <div class="heading-title tilt-left">
                     <h1 class="purple-title">Where creativity <br/> comes to life</h1>
                 </div>
                 <div class="heading-text">
@@ -65,6 +65,11 @@
                 <div class="heading-button">
                     <button>BOOK YOUR EVENT</button>
                 </div>
+                <div class="wave">
+                  <svg width="440" height="55" viewBox="0 0 1440 570" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                    <path d="M0 0H1440V533.302C1424.52 533.302 1361.24 510.946 1279.72 516.802C1177.83 524.122 957.037 601.345 645.5 543.884C379.677 494.854 136.5 516.802 0 533.302V0Z" fill="#A9E7E2"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
@@ -72,12 +77,12 @@
 <!-- ********************  WHY YOU'LL LOVE US  ****************** -->
 
     <section id="love">
-        <div class="love-title">
+        <div class="love-title tilt-right">
             <h1 class="purple-title">Why you'll love us</h1>
         </div>
         <div class="love-items">
             <div class="love-item">
-                <div class="item-icon item-icon-1"></div>
+                <div class="item-icon item-icon-1"><img src="images/stress-free-icon.png" alt="stress-free-icon"></div>
                 <div class="item-title"><h2>Stress relief</h2></div>
                 <div class="item-text">
                     <p>Painting can help the mind let go of unwanted burdens by allowing your mind to relax and focus on the canvas.</p>
@@ -104,7 +109,7 @@
 
 <!-- *****************  SERVICES  ***************************** -->
 <section class="services">
-    <div class="services-title">
+    <div class="services-title tilt-left">
         <h1 class="purple-title">Our services</h1>
     </div>
     <div class="services-background">
@@ -161,12 +166,12 @@
         <div class="services-indicators-div"></div>
       </div>
       <div class="arrows">
-        <div id="arrow-left">
+        <div id="arrow-left" class="prev-btn">
           <div id="arrow-left-1"></div>
           <div id="arrow-left-2"></div>
           <div id="arrow-left-3"></div>
         </div>
-        <div id="arrow-right">
+        <div id="arrow-right" class="next-btn">
           <div id="arrow-right-1"></div>
           <div id="arrow-right-2"></div>
           <div id="arrow-right-3"></div>
@@ -177,6 +182,9 @@
   <!-- *********************  TESTIMONIALS **********************  -->
 
   <section class="testimonials">
+    <div class="tilt-right">
+      <h1 class="purple-title">What people are saying</h1>
+  </div>
     <div class="testimonial-cards">
       <div class="testimonial-card test-middle">
         <div class="card-title">
@@ -223,23 +231,23 @@
           </p>
         </div>
         <div class="card-text">
-          <p>— Nora ovtchavora</p>
+          <p>—Nora ovtchavora</p>
         </div>
       </div>
     </div>
     <div class="controls">
-      <div class="selectors">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="testimonial-selectors selectors">
+        <div class="carousel-indicators-div selector-active"></div>
+        <div class="carousel-indicators-div"></div>
+        <div class="carousel-indicators-div"></div>
       </div>
       <div class="arrows">
-        <div class="prev-btn">
+        <div id="testimonial-prev-btn" class="prev-btn carousel-prev-btn">
           <div id="arrow-left-1"></div>
           <div id="arrow-left-2"></div>
           <div id="arrow-left-3"></div>
         </div>
-        <div class="next-btn">
+        <div id="testimonial-next-btn" class="next-btn carousel-next-btn">
           <div id="arrow-right-1"></div>
           <div id="arrow-right-2"></div>
           <div id="arrow-right-3"></div>
@@ -247,7 +255,23 @@
       </div>
     </div>
   </section>
-    
+  <!-- ************** READY ************************** -->
+  <section class="ready">
+    <div class="ready-div">
+      <div class="tilt-left">
+        <h1 class="purple-title">Ready to give it a try?</h1>
+      </div>
+      <div class="ready-button">
+        <button>Book now!</button>
+      </div>
+    </div>
+    <div class="ready-background">
+      <svg width="375" height="365" viewBox="0 0 375 365" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2.32326e-05 365L375 365L375 20.4776C370.968 20.4776 354.489 34.9199 333.261 31.1369C306.726 26.4082 249.228 -23.4797 168.099 13.6415C98.8742 45.3157 35.5469 31.137 0 20.4776L2.32326e-05 365Z" fill="#ECE1FD"/>
+        </svg>
+        
+    </div>
+  </section>
     <!-- ******************  FOOTER  ******************************* -->
     <section id="footer">
         <div class="footer-div" id="footer-div-1" >
