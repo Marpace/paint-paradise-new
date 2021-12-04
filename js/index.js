@@ -187,7 +187,7 @@ window.onload = function (){
             card.style.display = "none";
             removeAddClass(card, "test-right", "test-left");
             setTimeout(() => {
-                card.style.display = "block";
+                card.style.display = "flex";
                 isAnimating = false;
             }, 200);
             }
@@ -206,7 +206,7 @@ window.onload = function (){
             card.style.display = "none";
             removeAddClass(card, "test-left", "test-right");
             setTimeout(() => {
-                card.style.display = "block";
+                card.style.display = "flex";
                 isAnimating = false;
             }, 200);
             } else if (card.classList.contains("test-right")) {

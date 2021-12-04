@@ -1,3 +1,10 @@
+/* ********** COLORS ******************* */
+:root {
+  --purple: #5B28B5;
+  --light-purple: #ECE1FD;
+  --dark-purple: #1D1330;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,11 +20,19 @@ html,body
   font-family: "Roboto", sans-serif;
 }
 .purple-title {
-    font-size: 1.7rem;
-    font-family: "Dela Gothic One";
-    color: #5B28B5;  
-    text-align: center; 
-    margin: 0 0 30px 0;
+  font-size: 1.7rem;
+  font-family: "Dela Gothic One";
+  color: var(--purple);  
+  text-align: center; 
+  margin: 0 0 30px 0;
+}
+.purple-button {
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: white;
+  background: var(--purple);
 }
 .tilt-left {
   transform: rotate(-1deg);
@@ -25,6 +40,7 @@ html,body
 .tilt-right {
   transform: rotate(1deg);
 }
+
 
 /* ****************** NAVBAR ******************* */
 .navbar {
@@ -66,7 +82,7 @@ html,body
 }
 .collapsed-nav {
     height: 0px;
-    background: #1D1330;
+    background: var(--dark-purple);
     overflow: hidden;
     transition: .4s;
 }
@@ -105,7 +121,7 @@ html,body
     height: 35px;
     width: 35px;
     border-radius: 50px;
-    background: white;
+    background: var(--light-purple);
     margin: 0 10px 0 0;
 }
 .drop-down-link h3 {
@@ -121,13 +137,11 @@ html,body
 }
 .heading-background-purple {
     height: 60vh;
-    /* background-image: url("../images/hero-background-purple.svg"); */
     background-repeat: no-repeat;
 } 
 .heading-background-blue {
   position: relative;
     height: 57vh;
-    background-color: #A9E7E2;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -136,21 +150,23 @@ html,body
 } 
 .wave {
   position: absolute;
-  top: 60%;
+  top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  /* transform: rotate(180deg); */
+}
+.wave-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-.wave svg {
+.vector {
 width: 100%;
-height: 200px;
-  /* position: relative;
-  display: block;
-  width: calc(101% + 1.3px);
-  height: 51px; */
 }
 
 .heading-title {
@@ -174,16 +190,7 @@ height: 200px;
   z-index: 1000;
   width: 100%;
   text-align: center;
-  margin: 50px 0 0 0 ;
-}
-.heading-button button {
-    width: 80%;
-    padding: 20px 30px;
-    font-size: 18px;
-    border: none;
-    border-radius: 50px;
-    color: white;
-    background: #5B28B5;
+  margin: 30px 0 0 0 ;
 }
 
 /* ************************ LOVE ****************** */
@@ -213,12 +220,11 @@ height: 200px;
 
 /* *************** SERVICES ***************  */
 .card-title,
-.card-text,
+.service-card-text,
 .card-button {
   text-align: center;
 }
 .services {
-  height: 115vh;
   padding: 50px 0;
   display: flex;
   flex-direction: column;
@@ -228,7 +234,7 @@ height: 200px;
     position: relative;
   display: flex;
   justify-content: center;
-  min-height: 55vh;
+  height: 400px;
   background-image: url("../images/services-background.png");
   background-size: cover;
   width: 90%;
@@ -241,7 +247,7 @@ height: 200px;
   position: absolute;
   top: 50%;
   width: 90%;
-  height: 45vh;
+  height: 90%;
   padding: 30px;
   border: 2px solid black;
   border-radius: 10px;
@@ -249,13 +255,9 @@ height: 200px;
   box-shadow: 7px 10px;
   transition: .3s;
 }
-.card-button button {
-  border: none;
-  padding: 10px 30px;
-  border-radius: 50px;
-  font-size: 25px;
-  color: white;
-  background: #5B28B5;
+.service-card-text p {
+  font-size: 100%;
+  line-height: 1.4;
 }
 .left-card {
     left: -100px;
@@ -270,12 +272,12 @@ height: 200px;
   opacity: 0;
 }
 .controls {
-  width: 85%;
+  width: 320px;
 }
 .selectors {
   display: flex;
   width: 100%;
-  margin-top: 180px;
+  margin-top: 190px;
   justify-content: space-between;
 }
 .services-indicators-div {
@@ -294,7 +296,7 @@ height: 200px;
   height: 60px;
   width: 60px;
   border-radius: 50px;
-  background: #efdaf5;
+  background: var(--light-purple);
   cursor: pointer;
 }
 #arrow-left div,
@@ -356,8 +358,12 @@ height: 200px;
   }
   .testimonial-cards {
     width: 90%;
-    height: 30vh;
+    height: 250px;
     position: relative;
+  }
+  .card-text,
+  .card-author {
+    text-align: center;
   }
   .testimonial-card {
     display: flex;
@@ -367,9 +373,26 @@ height: 200px;
     padding: 20px;
     border: 2px solid black;
     border-radius: 10px;
-    height: 35vh;
+    height: 300px;
     width: 90%;
     transition: 0.3s;
+  }
+  .card-text p {
+    line-height: 1.4;
+    font-size: 16px;
+    font-weight: bold
+  }
+  .fa-quote-left {
+    font-size: 14px;
+    transform: translateY(-10px);
+  }
+  .fa-quote-right {
+    font-size: 14px;
+    transform: translateY(-3px);
+  }
+  .card-author p {
+    font-size: 14px;
+    font-weight: bold;
   }
   .test-middle {
     transform: translateY(-10px);
@@ -398,13 +421,13 @@ height: 200px;
   background: #EBEBEB;
   }
   .selector-active {
-    background: #1D1330;
+    background: var(--dark-purple);
   }
 
 /* ************* READY ********************* */
 
 .ready {
-  margin: 50px 0;
+  margin: 50px 0 -10px 0;
   height: 370px;
   position: relative;
   display: flex;
@@ -412,21 +435,18 @@ height: 200px;
   align-items: center;
 }
 .ready-div {
-  width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
   z-index: 1000;
 }
+.ready-title {
+  width: 60%;
+}
 .ready-button {
   text-align: center;
-}
-.ready-button button {
-  width: 80%;
-  padding: 20px 30px;
-  font-size: 18px;
-  border: none;
-  border-radius: 50px;
-  color: white;
-  background: #5B28B5;
 }
 /* .ready-background{
   position: absolute;
@@ -448,4 +468,45 @@ height: 200px;
 .ready-background svg {
 width: 100%;
 /* height: 200px; */
+}
+/* ************* FOOTER ******************* */
+.footer {
+  background-color: var(--dark-purple);
+}
+
+
+/* ****************  MEDIA QUERIES  ***************************** */
+
+@media only screen and (min-width: 600px) {
+  .nav-wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .navbar {
+    padding: 0;
+  }
+ .navbar-toggler {
+   display: none;
+ }
+ .collapsed-nav {
+   display: flex;
+   align-items: center;
+   height: 100px;
+   background: white;
+ }
+ .nav-links {
+   display: flex;
+   padding: 0;
+ }
+ .nav-link {
+   margin: 0 20px;
+ }
+ .nav-link h2 {
+   font-size: 20px;
+   font-weight: normal;
+   color: var(--dark-purple);
+ }
+
+  
 }
