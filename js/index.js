@@ -80,9 +80,14 @@ window.onload = function (){
 
         // Drop down menu animation 
         const toggleDropDownMenu = function() {
+
             if(getComputedStyle(dropDownMenu).height === "0px"){
                 dropDownArrow.style.transform = "rotate(0deg)"
-                dropDownMenu.style.height = "170px";
+                if(screen.width >= 600){
+                    dropDownMenu.style.height = "210px"
+                } else if (screen.width <=599){
+                    dropDownMenu.style.height = "150px";
+                }
             } else {
                 dropDownArrow.style.transform = "rotate(180deg)"
                 dropDownMenu.style.height = "0px";
@@ -189,7 +194,7 @@ window.onload = function (){
             setTimeout(() => {
                 card.style.display = "flex";
                 isAnimating = false;
-            }, 200);
+            }, 250);
             }
         });
         indicatorIndex --;
@@ -208,7 +213,7 @@ window.onload = function (){
             setTimeout(() => {
                 card.style.display = "flex";
                 isAnimating = false;
-            }, 200);
+            }, 250);
             } else if (card.classList.contains("test-right")) {
             removeAddClass(card, "test-right", "test-middle");
             }
