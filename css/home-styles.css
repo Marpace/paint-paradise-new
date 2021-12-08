@@ -1,3 +1,35 @@
+/* ****************  FONTS  **************** */
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/Gotham-Book.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../fonts/Gotham-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Bold';
+  src: url('../fonts/Gotham-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Ultra';
+  src: url('../fonts/Gotham-Ultra.woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* ********** COLORS ******************* */
 :root {
   --purple: #5B28B5;
@@ -17,11 +49,13 @@ html,body
   margin: 0px;
   padding: 0px;
   overflow-x: hidden; 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Gotham Book';
+  font-weight: normal;
+  font-style: normal;
 }
 .purple-title {
   font-size: 1.7rem;
-  font-family: "Dela Gothic One";
+  font-family: "Gotham Ultra";
   color: var(--purple);  
   text-align: center; 
   margin: 0 0 30px 0;
@@ -30,6 +64,7 @@ html,body
   border: none;
   padding: 20px 40px;
   border-radius: 50px;
+  font-family: "Gotham Medium";
   font-size: 18px;
   color: white;
   background: var(--purple);
@@ -97,6 +132,7 @@ html,body
 }
 .services-nav-link {
     display: flex;
+    cursor: pointer;
     align-items: center;
 }
 .services-nav-link i {
@@ -265,6 +301,9 @@ width: 100%;
   background: white;
   box-shadow: 7px 10px;
   transition: .3s;
+}
+.card-title h2 {
+  font-family: 'Gotham Bold';
 }
 .service-card-text p {
   font-size: 100%;
@@ -484,10 +523,52 @@ width: 100%;
 }
 /* ************* FOOTER ******************* */
 .footer {
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 10%;
   background-color: var(--dark-purple);
 }
-
-
+.footer div {
+  margin: 10px 0;
+}
+.footer h1,
+.footer p {
+  color: var(--light-purple);
+}
+.hours-title,
+.contact-title,
+.social-title {
+  margin-bottom: 20px;
+}
+.footer-logo {
+  height: 60px;
+  width: 60px;
+  background-image: url(../images/footer-logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px 0;
+}
+.hours-content p {
+  margin: 20px 0;
+}
+.contact-div {
+  height: 50px;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+}
+.contact-div .footer-icon {
+  margin-right: 10px;
+}
+.social-icons {
+  width: 60%;
+  max-width: 250px;
+  display: flex;
+  justify-content: space-between;
+}
 /* ************************************************************** */
 /* ****************  MEDIA QUERIES  ***************************** */
 /* ************************************************************** */
@@ -686,9 +767,21 @@ width: 100%;
     font-size: 2.8rem;
   }
 
+/* ************  NAVBAR  ********************* */
+.nav-wrap {
+  padding: 0 12%;
+}
+
+
 /* **************  HEADING  ******************** */
   .heading {
     height: 700px;
+  }
+  .heading-wrap {
+    padding-left: 12%;
+  }
+  .heading-left {
+    align-items: flex-start;
   }
   .heading-img-1 img {
     left: -90px;

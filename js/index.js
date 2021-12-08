@@ -6,6 +6,7 @@ const toggler = document.querySelector(".navbar-toggler");
 const togglerDivs = [...document.querySelectorAll(".toggler-div")];
 const navMenu = document.querySelector(".collapsed-nav");
 const navLinks = document.querySelector(".nav-links");
+const servicesMenu = document.querySelector(".services-nav-link")
 
 
 //Drop down menu
@@ -16,6 +17,7 @@ const dropDownMenu = document.querySelector(".drop-down-menu");
 //Services section 
 const arrowLeft = document.querySelector(".prev-btn");
 const arrowRight = document.querySelector(".next-btn");
+let servicesWrap = document.querySelector(".services-wrap")
 const cards = [...document.querySelectorAll(".services-card")];
 const selectors = [...document.querySelectorAll(".services-indicators-div")];
 
@@ -23,6 +25,7 @@ const selectors = [...document.querySelectorAll(".services-indicators-div")];
 //Testimonials section 
 const prevBtn = document.querySelector("#testimonial-prev-btn");
 const nextBtn = document.querySelector("#testimonial-next-btn");
+const cardsDiv = document.querySelector(".testimonial-cards")
 const testCards = [...document.querySelectorAll(".testimonial-card")];
 const indicators = [...document.querySelectorAll(".carousel-indicators-div")]
 
@@ -94,7 +97,7 @@ window.onload = function (){
             }
         }
 
-        dropDownArrow.addEventListener("click", function(){
+        servicesMenu.addEventListener("click", function(){
             toggleDropDownMenu();
 
         });
@@ -120,9 +123,8 @@ window.onload = function (){
         }
 
 
-        //Click events for arrow buttons 
-        arrowLeft.addEventListener("click", function(){
 
+        const nextCard = function() {
             cards.forEach(card=> {
                 if(card.classList.contains("middle-card")){
                     removeAddClass(card, "middle-card", "left-card")    
@@ -134,13 +136,11 @@ window.onload = function (){
                     removeAddClass(card, "left-card", "right-card")
                 }
             });
-
-            index --;
+            index ++;
             selectorSwitch();
+        }
 
-        });
-        arrowRight.addEventListener("click", function(){
-
+        const prevCard = function(){
             cards.forEach(card=> {
                 if(card.classList.contains("middle-card")){
                     removeAddClass(card, "middle-card", "right-card")    
@@ -152,16 +152,58 @@ window.onload = function (){
                     }, 100);
                 }
             });
-
-            index ++;
+            index --;
             selectorSwitch();
+        }
 
+        //Click events for arrow buttons 
+        arrowLeft.addEventListener("click", function(){
+            prevCard();
         });
+        arrowRight.addEventListener("click", function(){
+            nextCard();
+        });
+
+
+        // Touch events for swipe animation on touch screens 
+
+        let XStart;
+        let startTime;
+        const leftThreshold = 100;
+        const rightThreshold = -100;
+        const allowedTime = 350;
+
+     
+            servicesWrap.addEventListener("touchstart", function(e) {
+                const touchObj = e.changedTouches[0];
+                XStart = touchObj.pageX;
+                startTime = new Date().getTime();
+
+            });
+
+            servicesWrap.addEventListener("touchend", function(e){
+                const touchObj = e.changedTouches[0];
+                const XDiff = XStart - touchObj.pageX;
+                timeDiff = new Date().getTime() - startTime;
+            
+                if(timeDiff < allowedTime){
+                    if(XDiff > leftThreshold){ 
+                        nextCard();
+                    } else if (XDiff < rightThreshold){
+                           prevCard();            
+                    }
+                }
+
+            });
+
+
+
 
         //testimonials carousel functionality
         //boolean to check if animation is finished before starting
         //new one
         let isAnimating = false;
+
 
         //Indicator switching
         let indicatorIndex = 0;
@@ -177,11 +219,29 @@ window.onload = function (){
             indicators[indicatorIndex].classList.add("selector-active");
         }
 
+        const nextTestCard = function(){
+            if (isAnimating) return;
+        isAnimating = true;
+        testCards.forEach((card) => {
+            if (card.classList.contains("test-middle")) {
+            removeAddClass(card, "test-middle", "test-left");
+            } else if (card.classList.contains("test-left")) {
+            card.style.display = "none";
+            removeAddClass(card, "test-left", "test-right");
+            setTimeout(() => {
+                card.style.display = "flex";
+                isAnimating = false;
+            }, 300);
+            } else if (card.classList.contains("test-right")) {
+            removeAddClass(card, "test-right", "test-middle");
+            }
+        });
+        indicatorIndex ++;
+        indicatorSwitch();
+        };
 
-        //click events for previous and next buttons using the
-        //same function from the services section to remove and add a class
-        prevBtn.addEventListener("click", function () {
-        if (isAnimating) return;
+        const prevTestCard = function(){
+            if (isAnimating) return;
         isAnimating = true;
         testCards.forEach((card) => {
             if (card.classList.contains("test-middle")) {
@@ -194,32 +254,41 @@ window.onload = function (){
             setTimeout(() => {
                 card.style.display = "flex";
                 isAnimating = false;
-            }, 250);
+            }, 300);
             }
         });
         indicatorIndex --;
         indicatorSwitch();
+        }
+
+
+        cardsDiv.addEventListener("touchstart", function(e){
+            const touchObj = e.changedTouches[0];
+            XStart = touchObj.pageX;
+            startTime = new Date().getTime();
+        })
+        cardsDiv.addEventListener("touchend", function(e){
+            const touchObj = e.changedTouches[0];
+            XDiff = XStart - touchObj.pageX;
+            timeDiff = new Date().getTime() - startTime;
+
+            if (timeDiff < allowedTime){
+                if(XDiff > leftThreshold){ 
+                    nextTestCard();
+                } else if (XDiff < rightThreshold){
+                    prevTestCard();            
+                }
+            }
+        })
+
+        //click events for previous and next buttons using the
+        //same function from the services section to remove and add a class
+        prevBtn.addEventListener("click", function () {
+            prevTestCard();
         });
 
         nextBtn.addEventListener("click", function () {
-        if (isAnimating) return;
-        isAnimating = true;
-        testCards.forEach((card) => {
-            if (card.classList.contains("test-middle")) {
-            removeAddClass(card, "test-middle", "test-left");
-            } else if (card.classList.contains("test-left")) {
-            card.style.display = "none";
-            removeAddClass(card, "test-left", "test-right");
-            setTimeout(() => {
-                card.style.display = "flex";
-                isAnimating = false;
-            }, 250);
-            } else if (card.classList.contains("test-right")) {
-            removeAddClass(card, "test-right", "test-middle");
-            }
-        });
-        indicatorIndex ++;
-        indicatorSwitch();
+            nextTestCard();
         });
 
 
