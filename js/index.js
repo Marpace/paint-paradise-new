@@ -6,8 +6,7 @@ const toggler = document.querySelector(".navbar-toggler");
 const togglerDivs = [...document.querySelectorAll(".toggler-div")];
 const navMenu = document.querySelector(".collapsed-nav");
 const navLinks = document.querySelector(".nav-links");
-const servicesMenu = document.querySelector(".services-nav-link")
-
+const servicesMenu = document.querySelector(".services-nav-link");
 
 //Drop down menu
 const dropDownArrow = document.querySelector(".services-nav-link i");
@@ -101,6 +100,8 @@ window.onload = function (){
             toggleDropDownMenu();
 
         });
+
+
 
         // Services card animations
         const removeAddClass = function(element, class1, class2){

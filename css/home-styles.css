@@ -54,7 +54,7 @@ html,body
   font-style: normal;
 }
 .purple-title {
-  font-size: 1.7rem;
+  font-size: 2.1rem;
   font-family: "Gotham Ultra";
   color: var(--purple);  
   text-align: center; 
@@ -124,6 +124,7 @@ html,body
 }
 .nav-link {
     margin: 50px 0;
+    cursor: pointer;
 
 }
 .nav-link h2 {
@@ -150,13 +151,42 @@ html,body
     display: flex;
     align-items: center;
     margin: 20px 0;
+    cursor: pointer;
 }
 .drop-down-icon {
     height: 30px;
     width: 30px;
-    border-radius: 50px;
-    background: var(--light-purple);
     margin: 0 10px 0 0;
+    transition: .3s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+.icon-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.4s;
+  transform-style: preserve-3d;
+}
+.drop-down-link:hover .icon-inner {
+  transform: rotateX(180deg);
+}
+.icon-front, .icon-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+.icon-front {
+  background: var(--light-purple);
+  border-radius: 50px;
+}
+.icon-back {
+  background-color: var(--purple);
+  border-radius: 50px;
+  transform: rotateX(180deg);
 }
 .drop-down-link h3 {
     color: white;
@@ -207,7 +237,7 @@ width: 100%;
     text-align: center;
 }
 .heading-title h1 {
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
 .heading-text {
   z-index: 1000;
@@ -530,7 +560,9 @@ width: 100%;
   padding: 10%;
   background-color: var(--dark-purple);
 }
-.footer div {
+.footer-hours,
+.footer-contact,
+.footer-social {
   margin: 10px 0;
 }
 .footer h1,
@@ -578,7 +610,7 @@ width: 100%;
 
 @media only screen and (min-width: 600px) {
   .purple-title {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
   .nav-wrap {
     display: flex;
@@ -653,6 +685,9 @@ width: 100%;
   .heading-text {
     z-index: 0;
   }
+  .heading-title h1 {
+    font-size: 3rem;
+  }
   /* ******************  SERVICES  ************************* */
   .card-title h2 {
     font-size: 30px;
@@ -670,6 +705,39 @@ width: 100%;
   }
   .card-author p {
     font-size: 16px;
+  }
+  /* *************  FOOTER  *********************** */
+  .footer {
+  align-items: center;
+  }
+  .footer-hours,
+  .footer-contact,
+  .footer-social {
+    width: 50%;
+  }
+  .hours-content div,
+  .contact-content div,
+  .social-content div {
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 10px auto;
+  }
+  .hours-content p{
+    text-align: center;
+  }
+  .contact-content,
+  .social-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-div {
+    height: 80px;
+    flex-direction: column;
+  } 
+  .social-icons {
+    width: 100%;
   }
 }
 
@@ -706,7 +774,7 @@ width: 100%;
   }
   .heading-title h1 {
     text-align: left;
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
   .heading-text p {
     text-align: left;
@@ -756,7 +824,45 @@ width: 100%;
   .service-card-text p {
     line-height: 1.6;
   }
-
+  /* ****************  FOOTER  ******************* */
+  .footer {
+    padding: 100px 5%;
+    height: 400px;
+    flex-direction: row;
+  }
+  .footer-logo {
+    margin: -15px 0 0 0;
+  }
+  .hours-content,
+  .contact-content,
+  .social-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer h1 {
+    font-size: 20px;
+  }
+  .footer p {
+    margin: 10px 0;
+    font-size: 15px;
+  }
+  .footer-hours,
+  .footer-contact,
+  .footer-social {
+    width: 33%;
+    height: 100%;
+  }
+  .footer-hours {
+    display: flex;
+  }
+  .contact-div {
+    height: 50px;
+    flex-direction: row;
+  }
+  .social-icons {
+    width: 80%;
+  }
 }
 
 /* *************  DESKTOP SCREENS  **************** */
@@ -780,6 +886,9 @@ width: 100%;
   .heading-wrap {
     padding-left: 12%;
   }
+  .heading-title h1 {
+    font-size: 3.4rem;
+  }
   .heading-left {
     align-items: flex-start;
   }
@@ -794,10 +903,16 @@ width: 100%;
   } 
 
   /* ***********************  WHY YOU'LL LOVE US  ******************** */
+  .love {
+    padding: 50px 11%;
+  }
+  .love-title {
+    margin-bottom: 50px;
+  }
   .love-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
   }
   .item-icon {
@@ -806,7 +921,6 @@ width: 100%;
   .love-item {
     width: 30%;
     text-align: left;
-    margin: 50px;
   }
   /* ******************  SERVICES  ************************* */
   .services {
@@ -864,6 +978,16 @@ width: 100%;
     height: 350px;
     width: 60%;
     margin-top: 50px;
+  }
+  /* ***************  FOOTER  ***************** */
+  .footer h1 {
+    font-size: 25px;
+  }
+  .footer p {
+    font-size: 18px;
+  }
+  .footer-hours {
+    justify-content: center;
   }
 }
 
