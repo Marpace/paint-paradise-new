@@ -127,7 +127,8 @@ html,body
     cursor: pointer;
 
 }
-.nav-link h2 {
+.nav-link a {
+  text-decoration: none;
     color: white;
     font-weight: lighter;
 }
@@ -203,7 +204,7 @@ html,body
 /* ****************** HEADING ********************* */
 
 .heading {
-    height: 500px;
+    height: 600px;
 }
 .heading-wrap {
   position: relative;
@@ -399,13 +400,13 @@ width: 100%;
 }
 
 #arrow-left-1 {
-  top: 26px;
+  top: 27px;
   left: 14px;
   transform: rotate(-45deg);
   transform-origin: top left;
 }
 #arrow-left-2 {
-  top: 26px;
+  top: 25px;
   left: 14px;
   transform: rotate(45deg);
   transform-origin: bottom left;
@@ -634,11 +635,11 @@ width: 100%;
  .nav-links {
    display: flex;
    padding: 0;
- }
+ } 
  .nav-link {
    margin: 0 20px;
  }
- .nav-link h2 {
+ .nav-link a {
    font-size: 20px;
    font-weight: normal;
    color: var(--dark-purple);
@@ -648,6 +649,13 @@ width: 100%;
  #services-drop-down {
   position: relative;
  }
+ #services-drop-down:hover .drop-down-menu {
+   height: 250px;
+ }
+ /* #services-drop-down:hover .services-nav-link i {
+   transform: rotate(0deg);
+ } */
+
  .services-nav-link i {
    color: var(--dark-purple);
   }
@@ -657,7 +665,7 @@ width: 100%;
     align-items: center;
     justify-content: flex-end;
     position: absolute;
-    top: 62px;
+    top: 25px;
     left: -80px;
     height: 0px;
     width: 260px;
@@ -893,18 +901,19 @@ width: 100%;
     align-items: flex-start;
   }
   .heading-img-1 img {
-    left: -90px;
+    left: -140px;
     width: 330px;
   }
   .heading-img-2 img {
     top: 70px;
-    left: 230px;
+    left: 220px;
     width: 110px;
   } 
 
   /* ***********************  WHY YOU'LL LOVE US  ******************** */
   .love {
     padding: 50px 11%;
+    height: 600px;
   }
   .love-title {
     margin-bottom: 50px;
