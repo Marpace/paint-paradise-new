@@ -1,0 +1,45 @@
+/* ****************  FONTS  **************** */
+@font-face {
+  font-family: 'Gotham Book';
+  src: url('../fonts/Gotham-Book.woff') format('woff');
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gotham Medium';
+  src: url('../fonts/Gotham-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+  
+ @font-face {
+  font-family: 'Gotham Bold';
+  src: url('../fonts/Gotham-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+  
+@font-face {
+  font-family: 'Gotham Ultra';
+  src: url('../fonts/Gotham-Ultra.woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
+  font-display: swap;
+}
+  
+
+
+.purple-title {
+    font-size: 2.1rem;
+    font-family: "Gotham Ultra";
+    color: $purple;  
+    text-align: center; 
+    margin: 0 0 30px 0;
+}
+
+.font-medium {
+  font-family: "Gotham Medium";
+}

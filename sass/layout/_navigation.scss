@@ -1,0 +1,243 @@
+.navbar {
+    @include flex_centered(row);
+    justify-content: space-between;
+    height: 100px;
+    padding: 20px;
+
+    .logo {
+
+        .nav-brand {
+            height: 60px;
+            width: 60px;
+            background-image: url("../images/paint-splatter.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        h3 {
+            display: none;
+        }
+
+    }
+    .navbar-toggler {
+        height: 40px;
+        width: 40px;
+        position: relative;
+    
+        .toggler-div {
+            position: absolute;
+            height: 3px;
+            width: 0;
+            border-radius: 2px;
+            background: black;
+            transition: 0.2s;
+        }
+        #toggler-div-1 {
+            top: 0px;
+        }
+        #toggler-div-2{
+            top: 15px;
+        }
+        #toggler-div-3{
+            top: 30px;
+        }
+    }
+}
+
+.collapsed-nav {
+    height: 0px;
+    background: $dark_purple;
+    transition: .4s;
+
+    .nav-links {
+        padding: 120px 30px;
+
+        .nav-link {
+            margin: 50px 0;
+            cursor: pointer;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-weight: lighter;
+            }
+            .services-nav-link {
+                @include flex_centered(row);
+                cursor: pointer;  
+                justify-content: start;
+                
+                i {
+                    color: white;
+                    margin: 0 0 0 10px;
+                    transform: rotate(180deg);
+                    transition: .2s;
+                }
+            }
+            .drop-down-menu {
+                position: relative;
+                height: 0px;
+                overflow: hidden;
+                transition: .5s;
+                z-index: 1001;
+
+                .menu-divider {
+                    display: none;
+                }
+                .drop-down-link {
+                    @include flex_centered(row);
+                    justify-content: flex-start;                  
+                    margin: 20px 0;
+                    cursor: pointer;
+
+                    &:hover .icon-inner {
+                        transform: rotateX(180deg);
+                    }
+                    h3 {
+                        color: white;
+                        font-weight: lighter;
+                    }
+                    .drop-down-icon {
+                        height: 30px;
+                        width: 30px;
+                        margin: 0 10px 0 0;
+                        transition: .3s;
+                        transform-style: preserve-3d;
+                        perspective: 1000px;
+
+                        
+                        .icon-inner {
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            transition: transform 0.4s;
+                            transform-style: preserve-3d;
+                            
+                            .icon-front, .icon-back {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                -webkit-backface-visibility: hidden; 
+                                backface-visibility: hidden;
+                            }
+                            .icon-front {
+                                background: $light_purple;
+                                border-radius: 50px;
+                            }
+                            .icon-back {
+                                background-color: $purple;
+                                border-radius: 50px;
+                                transform: rotateX(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// *********************  MEDIA QUERIES  *******************
+
+@include responsive($tablet) {
+    .nav-wrap {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      position: relative;
+      z-index: 1000;
+    
+        .purple-title {
+            font-size: 2.3rem;
+        }
+        .navbar {
+            padding: 0;
+
+            .navbar-toggler {
+                display: none;
+            }
+        }
+        .collapsed-nav {
+            display: flex;
+            align-items: center;
+            height: 100px;
+            background: white;
+
+            .nav-links {
+                display: flex;
+                padding: 0;
+
+                .nav-link {
+                    margin: 0 20px;
+
+                    a {
+                    font-size: 20px;
+                    font-weight: normal;
+                    color: var(--dark-purple);
+                    }
+                }
+                
+                /* ********  DROP DOWN ********* */
+                #services-drop-down {
+                    position: relative;
+                    
+                    i {
+                        color: $dark_purple;
+                    }
+                    .drop-down-menu {
+                        @include flex_centered(column);
+                        justify-content: flex-end;
+                        position: absolute;
+                        top: 25px;
+                        left: -80px;
+                        height: 0px;
+                        width: 260px;
+                        background-color: white;
+                        border-radius: 0 0 10px 10px;
+
+                        .drop-down-link {
+                            margin: 10px 0;
+
+                            .drop-down-icon {
+                                margin: 10px 10px 10px 0;
+                            } 
+                            h3 {
+                                color: black;
+                                font-weight: normal;
+                            }
+                        }
+                        .menu-divider {
+                            display: block;
+                            height: 1px;
+                            background-color: rgba(128, 128, 128, 0.2);
+                            border: none;
+                        }
+                    }
+                }
+                #services-drop-down:hover .drop-down-menu {
+                    height: 250px;
+                    }
+            } 
+        }
+    }
+}
+
+@include responsive($tablet_large) {
+
+    .nav-wrap {
+        padding: 0 5%;
+
+        .logo {
+            @include flex_centered(row);
+        }
+        .logo h3 {
+            display: block;
+        }
+    }
+
+}
+
+@include responsive($desktop) {
+    .nav-wrap {
+        padding: 0 12%;
+    }
+}

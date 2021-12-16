@@ -1,0 +1,36 @@
+.about-heading {
+    position: relative;
+    z-index: 900;
+    @include responsive($tablet_large){
+        
+        @include flex_centered(row-reverse);
+    }
+
+    .about-heading-img {
+        position: relative;
+        height: 400px;
+        width: 80%;
+        margin: 50px auto;
+        border-radius: 15px;
+        box-shadow: 13px 13px $light_purple;
+        background-image: url("../../../images/Mahsa-about.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 9000;
+    }
+    .about-heading-text {
+        padding: 15px;
+        
+        &-title {
+            @include tilt_left;
+        }
+        p{
+            font-size: 25px;
+            line-height: 1.4;
+        }
+    }
+  }
+  .about-heading-text .purple-title {
+    text-align: left;
+    margin-bottom: 10px;
+  }

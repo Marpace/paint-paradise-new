@@ -4,13 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="css" rel="stylesheet" href="css/home-styles.css">
+    <link id="css" rel="stylesheet" href="sass/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Dela+Gothic+One&family=Montserrat:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <script
-    src="https://kit.fontawesome.com/da7d263600.js"
-    crossorigin="anonymous"
-  ></script>
     <title>Home</title>
 </head>
 <body>
@@ -32,8 +28,11 @@
                 <div class="nav-link"><h2><a href="index.html">Home</a></h2></div>
                 <div id="services-drop-down" class="nav-link">
                     <div class="services-nav-link">
-                        <h2><a href="services.html">Services</a></h2>
-                        <i class="fas fa-chevron-up"></i>
+                        <h2><a href="">Services</a></h2>
+                        <div class="drop-down-arrow">
+                          <div class="drop-down-arrow-1"></div>
+                          <div class="drop-down-arrow-2"></div>
+                        </div>
                     </div>
                     <div class="drop-down-menu">
                       <div class="drop-down-link-wrap">
@@ -74,21 +73,111 @@
             </div>
         </div>
     </div>
+    <!-- ********************************  HEADING  *********************** -->
     <section class="about-heading">
         <div class="about-heading-img">
-            <div>Mahsa's picture</div>
+            <div></div>
         </div>
         <div class="about-heading-text">
-            <div class="purple-title tilt-left">
-                <h4>The founder</h4>
+            <div class="about-heading-text-title">
+                <h4 class="purple-title">The founder</h4>
             </div>
             <div>
-                <p>Mahsa Azimi, visual artist,</p>
+                <p class="font-medium">Mahsa Azimi, visual artist,</p>
                 <p>is the founder of Paint Paradise Art Studio. Her dream is for Paint Paradise to be a creative community space that inspires a love for creating art while bringing out each person’s inner artist. She had a vision to create a paint party business where it was not only hosted within her studio but also mobile and could travel to any venue.
+                </p>
+                    <p style="margin-top: 20px;">    
                     Mahsa has over a decade of experience in creating contemporary and abstract art. She is passionate about painting on canvas and her media of choice is acrylic. Colours, geometric shapes, and abstract designs inspire her style. Her paintings mainly demonstrate vibrant colours, movement, and dancing. She has been a child and youth program facilitator by profession where art is always used as a method of expression and therapy.</p>
             </div>
         </div>
     </section>
+    <!-- ********************************  INSTAGRAM  ************************************* -->
+
+    <section class="instagram">
+        <div class="instagram-text">
+            <div class="instagram-title">
+                <h2 class="font-medium">Check out her <br>work on instagram</h2>
+            </div>
+            <p>@crazy_about_colour</p>
+        </div>
+        <div class="instagram-carousel">
+          <div class="instagram-carousel-inner">
+            <div class="instagram-carousel-inner-item"></div>
+            <div class="instagram-carousel-inner-item"></div>
+            <div class="instagram-carousel-inner-item"></div>
+            <div class="instagram-carousel-inner-item"></div>
+            <div class="instagram-carousel-inner-item"></div>
+          </div>
+          <div class="controls">
+            <div class="selectors test-selectors">
+              <div class="selector-active"></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="arrows">
+              <div class="arrow-left test-prev-btn">
+                <div class="arrow-left-1"></div>
+                <div class="arrow-left-2"></div>
+                <div class="arrow-left-3"></div>
+              </div>
+              <div class="arrow-right test-next-btn">
+                <div class="arrow-right-1"></div>
+                <div class="arrow-right-2"></div>
+                <div class="arrow-right-3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- ******************  FOOTER  ******************************* -->
+    <section class="footer">
+      <div class="footer-section">
+          <div class="footer-logo"></div>
+          <div class="hours-content">
+            <div class="footer-title">
+              <h1>Business hours</h1>
+            </div>
+            <p>Weekends 9AM - 8PM</p>
+            <p>Weekday 9AM - 8PM</p>
+          </div>
+      </div>
+      <div class="footer-section">
+        <div class="contact-content">
+          <div class="footer-title">
+            <h1>Contact us</h1>
+          </div>
+          <div class="contact-div" >
+            <div class="footer-icon"><a href=""><img src="images/phone-icon.png" alt="phone-icon"></a></div><p>(647) 390-9659</p>
+        </div>
+          <div class="contact-div" >
+            <div class="footer-icon"><a href=""><img src="images/email-icon.png" alt="email-icon"></a></div><p>Paint.paradise.art@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="social-content">
+          <div class="footer-title">
+            <h1>Social</h1>
+          </div>
+          <div class="social-icons">
+            <div class="footer-icon"><a href=""><img src="images/facebook-icon.png" alt="facebook-icon"></a></div>
+            <div class="footer-icon"><a href=""><img src="images/instagram-icon.png" alt="instagram-icon"></a></div>
+            <div class="footer-icon"><a href=""><img src="images/tiktok-icon.png" alt="tiktok-icon"></a></div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+
+
+
+
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>

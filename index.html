@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="css" rel="stylesheet" href="css/home-styles.css">
+    <link id="css" rel="stylesheet" href="sass/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Dela+Gothic+One&family=Montserrat:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
-    <script
-    src="https://kit.fontawesome.com/da7d263600.js"
-    crossorigin="anonymous"
-  ></script>
+    <!-- <script src="https://kit.fontawesome.com/da7d263600.js" crossorigin="anonymous"></script> -->
     <title>Home</title>
 </head>
 <body>
@@ -32,8 +29,11 @@
                 <div class="nav-link"><h2><a href="index.html">Home</a></h2></div>
                 <div id="services-drop-down" class="nav-link">
                     <div class="services-nav-link">
-                        <h2><a href="services.html">Services</a></h2>
-                        <i class="fas fa-chevron-up"></i>
+                      <h2><a href="services.html">Services</a></h2>
+                      <div class="drop-down-arrow">
+                        <div class="drop-down-arrow-1"></div>
+                        <div class="drop-down-arrow-2"></div>
+                      </div>
                     </div>
                     <div class="drop-down-menu">
                       <div class="drop-down-link-wrap">
@@ -90,7 +90,7 @@
                     </svg>                     
               </div>
               <div class="heading-left">
-                <div class="heading-title tilt-left">
+                <div class="heading-title">
                   <h1 class="purple-title">Where creativity <br/> comes to life</h1>
                 </div>
                 <div class="heading-text">
@@ -115,7 +115,7 @@
 <!-- ********************  WHY YOU'LL LOVE US  ****************** -->
 
     <section class="love">
-        <div class="love-title tilt-right">
+        <div class="love-title ">
             <h1 class="purple-title">Why you'll love us</h1>
         </div>
         <div class="love-items">
@@ -147,7 +147,7 @@
 
 <!-- *****************  SERVICES  ***************************** -->
 <section class="services">
-    <div class="services-title tilt-left">
+    <div class="services-title ">
         <h1 class="purple-title">Our services</h1>
     </div>
     <div class="services-wrap">
@@ -175,9 +175,7 @@
         </div>
         <div class="service-card-text">
           <p>
-            Book a private paint party at our studio or in your home/venue to
-            celebrate any event such as birthdays, bacholerette parties, tea
-            parties, chidren’s parties, corporate events and more!
+            Join us at one of our public paint night events held at Wild Wing restaurant, a great date night or a girls night out idea!
           </p>
         </div>
         <div class="card-button">
@@ -190,9 +188,7 @@
         </div>
         <div class="service-card-text">
           <p>
-            Book a private paint party at our studio or in your home/venue to
-            celebrate any event such as birthdays, bacholerette parties, tea
-            parties, chidren’s parties, corporate events and more!
+            Buy a paint kit and have a paint party experience in the comfort of your own home!
           </p>
         </div>
         <div class="card-button">
@@ -201,21 +197,21 @@
       </div>
     </div>
     <div class="controls">
-      <div class="selectors">
-        <div class="services-indicators-div selector-active"></div>
-        <div class="services-indicators-div"></div>
-        <div class="services-indicators-div"></div>
+      <div class="selectors serv-selectors">
+        <div class="selector-active"></div>
+        <div></div>
+        <div></div>
       </div>
       <div class="arrows">
-        <div id="arrow-left" class="prev-btn">
-          <div id="arrow-left-1"></div>
-          <div id="arrow-left-2"></div>
-          <div id="arrow-left-3"></div>
+        <div class="arrow-left serv-prev-btn">
+          <div class="arrow-left-1"></div>
+          <div class="arrow-left-2"></div>
+          <div class="arrow-left-3"></div>
         </div>
-        <div id="arrow-right" class="next-btn">
-          <div id="arrow-right-1"></div>
-          <div id="arrow-right-2"></div>
-          <div id="arrow-right-3"></div>
+        <div class="arrow-right serv-next-btn">
+          <div class="arrow-right-1"></div>
+          <div class="arrow-right-2"></div>
+          <div class="arrow-right-3"></div>
         </div>
       </div>
     </div>
@@ -224,10 +220,10 @@
   <!-- *********************  TESTIMONIALS **********************  -->
 
   <section class="testimonials">
-    <div class="tilt-right">
+    <div class="testimonials-title">
       <h1 class="purple-title">What people are saying</h1>
   </div>
-    <div class="testimonial-cards">
+  <div class="testimonial-cards">
       <div class="testimonial-card test-middle">
         <div class="card-title">
           <h3>★★★★★</h3>
@@ -253,15 +249,12 @@
         <div class="card-text">
           <p>
             <i class="fas fa-quote-left"></i>
-            Wonderful gift that helped me turn my attention away from work,
-            clear my mind and just focus on making a beautiful painting. Very
-            fun activity for everyone for everyone no matter how much or how
-            little experience one has
+            I took my 7 year old nephew one afternoon for some paint fun and Mahsa was wonderful! Not only are you a great artist, you're an excellent teacher who knows how to work with all ages and groups
             <i class="fas fa-quote-right"></i>
           </p>
         </div>
         <div class="card-author">
-          <p>— Nora ovtchavora</p>
+          <p>— Zoe Sultani</p>
         </div>
       </div>
       <div class="testimonial-card test-right">
@@ -271,42 +264,40 @@
         <div class="card-text">
           <p>
             <i class="fas fa-quote-left"></i>
-            Wonderful gift that helped me turn my attention away from work,
-            clear my mind and just focus on making a beautiful painting. author
-            fun activity for everyone for everyone no matter how much or how
-            little experience one has
+            Amazing experience and lots of fun with friends! Great service and professionalism from Mahsa Azimi
             <i class="fas fa-quote-right"></i>
           </p>
         </div>
         <div class="card-author">
-          <p>—Nora ovtchavora</p>
+          <p>— Pablo Almonacid</p>
         </div>
       </div>
     </div>
     <div class="controls">
-      <div class="testimonial-selectors selectors">
-        <div class="carousel-indicators-div selector-active"></div>
-        <div class="carousel-indicators-div"></div>
-        <div class="carousel-indicators-div"></div>
+      <div class="selectors test-selectors">
+        <div class="selector-active"></div>
+        <div></div>
+        <div></div>
       </div>
       <div class="arrows">
-        <div id="testimonial-prev-btn" class="prev-btn carousel-prev-btn">
-          <div id="arrow-left-1"></div>
-          <div id="arrow-left-2"></div>
-          <div id="arrow-left-3"></div>
+        <div class="arrow-left test-prev-btn">
+          <div class="arrow-left-1"></div>
+          <div class="arrow-left-2"></div>
+          <div class="arrow-left-3"></div>
         </div>
-        <div id="testimonial-next-btn" class="next-btn carousel-next-btn">
-          <div id="arrow-right-1"></div>
-          <div id="arrow-right-2"></div>
-          <div id="arrow-right-3"></div>
+        <div class="arrow-right test-next-btn">
+          <div class="arrow-right-1"></div>
+          <div class="arrow-right-2"></div>
+          <div class="arrow-right-3"></div>
         </div>
       </div>
     </div>
+  </div>
   </section>
   <!-- ************** READY ************************** -->
   <section class="ready">
     <div class="ready-div">
-      <div class="ready-title tilt-left">
+      <div class="ready-title">
         <h1 class="purple-title">Ready to give it a try?</h1>
       </div>
       <div class="ready-button">
@@ -322,19 +313,19 @@
   </section>
     <!-- ******************  FOOTER  ******************************* -->
     <section class="footer">
-        <div class="footer-hours">
+        <div class="footer-section">
             <div class="footer-logo"></div>
             <div class="hours-content">
-              <div class="hours-title">
+              <div class="footer-title">
                 <h1>Business hours</h1>
               </div>
               <p>Weekends 9AM - 8PM</p>
               <p>Weekday 9AM - 8PM</p>
             </div>
         </div>
-        <div class="footer-contact">
+        <div class="footer-section">
           <div class="contact-content">
-            <div class="contact-title">
+            <div class="footer-title">
               <h1>Contact us</h1>
             </div>
             <div class="contact-div" >
@@ -345,9 +336,9 @@
             </div>
           </div>
         </div>
-        <div class="footer-social">
+        <div class="footer-section">
           <div class="social-content">
-            <div class="social-title">
+            <div class="footer-title">
               <h1>Social</h1>
             </div>
             <div class="social-icons">

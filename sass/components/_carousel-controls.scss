@@ -1,0 +1,113 @@
+
+.controls {
+    min-width: 320px;
+    max-width: 400px;
+    width: 80%;
+    margin: auto;
+    @include responsive($tablet_large) {
+        width: 400px;
+        margin: 0 30px 0;
+    }
+
+    .selectors {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @include responsive($tablet_large){
+            width: 250px;
+            margin: 20px auto -55px;
+        }
+
+        div {
+            height:8px;
+            width: 30%;
+            border-radius: 50px;
+            background: #EBEBEB;
+            margin: 0 3px;
+        }
+        
+        .selector-active {
+            background-color: $dark_purple;
+        }
+    }
+    .arrows {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .arrow-left,
+        .arrow-right {
+            position: relative;
+            height: 60px;
+            width: 60px;
+            border-radius: 50px;
+            background: $light_purple;
+            cursor: pointer;
+
+            div {
+                position: absolute;
+                height: 4px;
+                background: black;
+                border-radius: 50px;
+            }
+            
+            .arrow-left-1,
+            .arrow-left-2,
+            .arrow-right-1,
+            .arrow-right-2 {
+                width: 20px;
+            }
+            .arrow-left-3,
+            .arrow-right-3 {
+                width: 30px;
+            }
+            
+            .arrow-left-1 {
+                top: 27px;
+                left: 14px;
+                transform: rotate(-45deg);
+                transform-origin: top left;
+            }
+            .arrow-left-2 {
+                top: 25px;
+                left: 14px;
+                transform: rotate(45deg);
+                transform-origin: bottom left;
+            }
+            .arrow-left-3 {
+                top: 26px;
+                left: 14px;
+            }
+            .arrow-right-1 {
+                top: 26px;
+                right: 14px;
+                transform: rotate(-45deg);
+                transform-origin: top right;
+            }
+            .arrow-right-2 {
+                top: 26px;
+                right: 14px;
+                transform: rotate(45deg);
+                transform-origin: bottom right;
+            }
+            .arrow-right-3 {
+                top: 26px;
+                right: 14px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

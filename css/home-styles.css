@@ -144,9 +144,11 @@ html,body
     transition: .2s;
 }
 .drop-down-menu {
+  position: relative;
     height: 0px;
     overflow: hidden;
     transition: .5s;
+    z-index: 1001;
 }
 .drop-down-link {
     display: flex;
@@ -338,7 +340,7 @@ width: 100%;
 }
 .service-card-text p {
   font-size: 100%;
-  line-height: 1.4;
+  line-height: 1.4; 
 }
 .left-card {
     left: -100px;
@@ -652,9 +654,6 @@ width: 100%;
  #services-drop-down:hover .drop-down-menu {
    height: 250px;
  }
- /* #services-drop-down:hover .services-nav-link i {
-   transform: rotate(0deg);
- } */
 
  .services-nav-link i {
    color: var(--dark-purple);
@@ -1047,4 +1046,51 @@ width: 100%;
   .service-card-text p {
     font-size: 22px;
   }
+}
+
+
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+/* ****************** ABOUT PAGE ********************************* */
+/* ************************************************************** */
+/* ************************************************************** */
+/* ************************************************************** */
+
+.about-heading {
+  position: relative;
+  z-index: 900;
+}
+.about-heading-img {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin: 50px auto;
+  border-radius: 15px;
+  box-shadow: 13px 13px var(--light-purple);
+  background-color: grey;
+  z-index: 9000;
+}
+.about-heading-text {
+  padding: 25px;
+}
+.about-heading-text .purple-title {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.instagram p,
+.about-heading-text p {
+  font-size: 25px;
+  line-height: 1.4;
+  /* margin: 10px 0; */
+}
+.bold {
+  font-weight: bold;
+}
+.instagram-text .tilt-right {
+  font-family: "Gotham Bold";
+  font-weight: bold;
+  color: var(--purple);
+  font-size: 25px;
+  margin: 50px 0 35px 0;
 }

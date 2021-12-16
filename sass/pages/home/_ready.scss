@@ -1,0 +1,33 @@
+.ready {
+    margin: 50px 0 -10px 0;
+    height: 370px;
+    position: relative;
+    @include flex_centered(row);
+
+    .ready-div {
+        width: 100%;
+        @include flex_centered(column);
+        position: relative;
+        z-index: 1000;
+
+        .ready-title {
+            width: 60%;
+        }
+        .ready-button {
+            text-align: center;
+        }
+    }
+    .ready-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    
+        svg {
+            width: 100%;
+        }
+    }
+}
+  

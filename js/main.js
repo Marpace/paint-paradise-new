@@ -9,24 +9,24 @@ const navLinks = document.querySelector(".nav-links");
 const servicesMenu = document.querySelector(".services-nav-link");
 
 //Drop down menu
-const dropDownArrow = document.querySelector(".services-nav-link i");
+const dropDownArrow = document.querySelector(".drop-down-arrow");
 const dropDownMenu = document.querySelector(".drop-down-menu");
 
 
 //Services section 
-const arrowLeft = document.querySelector(".prev-btn");
-const arrowRight = document.querySelector(".next-btn");
+const arrowLeft = document.querySelector(".serv-prev-btn");
+const arrowRight = document.querySelector(".serv-next-btn");
 let servicesWrap = document.querySelector(".services-wrap")
 const cards = [...document.querySelectorAll(".services-card")];
-const selectors = [...document.querySelectorAll(".services-indicators-div")];
+const selectors = [...document.querySelectorAll(".serv-selectors div")];
 
 
 //Testimonials section 
-const prevBtn = document.querySelector("#testimonial-prev-btn");
-const nextBtn = document.querySelector("#testimonial-next-btn");
+const prevBtn = document.querySelector(".test-prev-btn");
+const nextBtn = document.querySelector(".test-next-btn");
 const cardsDiv = document.querySelector(".testimonial-cards")
 const testCards = [...document.querySelectorAll(".testimonial-card")];
-const indicators = [...document.querySelectorAll(".carousel-indicators-div")]
+const indicators = [...document.querySelectorAll(".test-selectors div")]
 
 window.onload = function (){
     let delay = 0;
@@ -71,7 +71,7 @@ const toggleMenu = function(){
         
         // Drop down collapse animation
         dropDownMenu.style.height = "0px"
-        dropDownArrow.style.transform = "rotate(180deg)"
+        dropDownArrow.style.transform = "rotate(0deg)"
     }
 }
 
@@ -84,10 +84,10 @@ toggler.addEventListener("click", function(){
 const toggleDropDownMenu = function() {
     if(window.screen.width <= 599){
         if(getComputedStyle(dropDownMenu).height === "0px"){
-            dropDownArrow.style.transform = "rotate(0deg)"      
+            dropDownArrow.style.transform = "rotate(180deg)"      
             dropDownMenu.style.height = "150px";
         } else {
-            dropDownArrow.style.transform = "rotate(180deg)"
+            dropDownArrow.style.transform = "rotate(0deg)"
             dropDownMenu.style.height = "0px";
         }
     }

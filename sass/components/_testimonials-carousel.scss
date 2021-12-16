@@ -1,0 +1,84 @@
+.testimonials {
+    @include flex_centered(column);
+
+    .testimonials-title {
+        @include tilt_right;
+    }
+    .testimonial-cards {
+        width: 90%;
+        height: 250px;
+        margin-bottom: 85px;
+        position: relative;
+
+        .testimonial-card {
+            @include flex_centered(column);
+            justify-content: space-between;
+            position: absolute;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 300px;
+            width: 90%;
+            transition: 0.5s;
+            // margin: 0 auto;
+            @include responsive($desktop) {  
+                width: 60%;
+            }
+
+            .card-text,
+            .card-author {
+                text-align: center;
+            }
+
+            @include responsive($tablet) {
+                .card-title h3 {
+                    font-size: 25px;
+                }
+            }
+            .card-text p {
+                line-height: 1.4;
+                font-size: 16px;
+                font-weight: bold;
+                @include responsive($tablet) {
+                    font-size: 20px;
+                    line-height: 1.6;
+                }
+            }
+            .fa-quote-left {
+                font-size: 14px;
+                transform: translateY(-10px);
+            }
+            .fa-quote-right {
+                font-size: 14px;
+                transform: translateY(-3px);
+            }
+            .card-author p {
+                font-size: 14px;
+                font-weight: bold;
+                color: $purple;
+                @include responsive($tablet) {
+                    font-size: 18px;
+                }
+            }
+        }
+        .test-middle {
+            transform: translateY(-10px);
+            left: 5%;
+            @include responsive($desktop){
+                left: 20%;
+            }
+        }
+        .test-left {
+            left: -90%;
+            @include responsive($desktop) {
+                left: -50%;
+            }
+        }
+        .test-right {
+            left: 100%;
+            @include responsive($desktop){
+                left: 90%;
+            }
+        }
+    }
+}

@@ -1,0 +1,158 @@
+.services {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .services-title{
+        @include tilt_left;
+    }
+    .services-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        .services-background {
+            @include flex_centered(row);
+            position: relative;
+            height: 400px;
+            margin-bottom: 200px;
+            background-image: url("../images/services-background.png");
+            background-size: cover;
+            width: 90%;
+            border-radius: 10px;
+            
+            .services-card {
+                @include flex_centered(column);
+                justify-content: space-between;
+                position: absolute;
+                top: 50%;
+                width: 90%;
+                height: 90%;
+                padding: 30px;
+                border: 2px solid black;
+                border-radius: 10px;
+                background: white;
+                @include box-shadow(black);
+                transition: .3s;
+            
+                .card-title,
+                .service-card-text,
+                .card-button {
+                    text-align: center;
+                }
+                .card-title h2 {
+                     font-family: 'Gotham Bold';
+                     color: $dark_purple;
+                     font-size: 22px;
+                     @include responsive($tablet) {
+                        font-size: 30px;
+                    }
+                    @include responsive($tablet_large){
+                        font-size: 32px;
+                    }
+                }
+                .service-card-text p {
+                    font-size: 16px;
+                    line-height: 1.4; 
+                    @include responsive(500px){
+                        font-size: 18px;
+                        line-height: 1.5;
+                    }
+                    @include responsive($tablet){
+                        font-size: 20px;
+                        line-height: 1.6;
+                    }
+                    @include responsive($tablet_large){
+                        font-size: 22px;
+                        line-height: 1.8;
+                    }
+                }
+            }
+            .left-card {
+                left: -100px;
+                opacity: 0;
+            }
+            .middle-card {
+                opacity: 1;
+                left: 5%;
+            }
+            .right-card {
+                left: 100px;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+@include responsive($desktop){
+    .services {
+        height: 800px;
+        padding: 0px 100px;
+
+        .services-title {
+            margin-bottom: 50px;
+        }
+        .services-wrap {
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+
+            .services-background {
+                width: 350px;
+                height: 495px;
+                margin-bottom: 0;
+                @include responsive($desktop_large){
+                    width: 400px;
+                    height: 550px;
+                }
+
+                .services-card {
+                    top: 100px;
+                    width: 550px;
+                    height: 300px;
+                    align-items: flex-start;
+                    padding: 30px 40px 20px 60px;
+                    @include responsive($desktop_large) {
+                        top: 150px;
+                        width: 550px;
+                    }
+
+                    .card-title h2 {
+                        font-size: 30px;
+                    }
+                    .service-card-text p {
+                        font-size: 18px;
+                        text-align: left;
+                        line-height: 1.4;
+                        margin-bottom: 15px;
+                        @include responsive($desktop_large) {
+                            line-height: 1.5;
+                        }
+                    }
+                    .card-button {
+                        text-align: left;
+                    }
+                }
+                .middle-card {
+                    left: 70%;
+                }
+                .right-card {
+                    left: 400px;
+                }
+                .left-card {
+                    left: 120px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

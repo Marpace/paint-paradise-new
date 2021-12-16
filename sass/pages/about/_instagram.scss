@@ -1,0 +1,25 @@
+.instagram-title h2 {
+    font-size: 28px;
+    color: $purple;
+    @include tilt_right;
+}
+.instagram-text p {
+    font-size: 25px;
+}
+.instagram-carousel {
+    height: 200px;
+    width: 100%;
+
+    &-inner {
+        @include flex_centered(row);
+        overflow: hidden;
+        height: 100%;
+
+        &-item {
+            height: 100%;
+            width: 45%;
+            margin: 0 10px;
+            background-color: grey;
+        }
+    }
+}

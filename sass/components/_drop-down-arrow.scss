@@ -1,0 +1,30 @@
+.drop-down-arrow {
+    position: relative;
+    height: 15px;
+    width: 20px;
+    margin: 5px;
+    transition: .4s;
+
+    div {
+        height: 2px;
+        width: 10px;
+        background-color: white;
+        @include responsive($tablet) {
+            background-color: $dark_purple;
+        }
+        position: absolute;
+        border-radius: 50px;
+    }
+    .drop-down-arrow-1 {
+        left: 2px;
+        top: 5px;
+        transform: rotate(40deg);
+        transform-origin: top left;
+    }
+    .drop-down-arrow-2 {
+        transform: rotate(-40deg);
+        transform-origin: top right;
+        top: 5px;
+        left: 5px;
+    }
+}
