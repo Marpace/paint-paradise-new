@@ -28,6 +28,7 @@ const cardsDiv = document.querySelector(".testimonial-cards")
 const testCards = [...document.querySelectorAll(".testimonial-card")];
 const indicators = [...document.querySelectorAll(".test-selectors div")]
 
+
 window.onload = function (){
     let delay = 0;
     togglerDivs.forEach(div => {
@@ -104,23 +105,38 @@ const removeAddClass = function(element, class1, class2){
     element.classList.add(class2);
 }
 
+
 // Selector switching 
-let index = 0;
+let servIndex = 0;
 const selectorSwitch = function() {
     selectors.forEach(selector =>{
         selector.classList.remove("selector-active");
     });
-    if(index >= 3){
-        index = 0;
-    } else if(index <= -1){
-        index = 2;
+    if(servIndex >= 3){
+        servIndex = 0;
+    } else if(servIndex <= -1){
+        servIndex = 2;
     }
-    selectors[index].classList.add("selector-active");
+    selectors[servIndex].classList.add("selector-active");
 }
 
+// let servIndex = 0;
+// function selectorSwitch(array, index) {
+//     array.forEach(item =>{
+//         item.classList.remove("selector-active");
+//     });
+//     if(index >= 3){
+//         index = 0;
+//     } else if(index <= -1){
+//         index = 2;
+//     }
+//     array[index].classList.add("selector-active");
+// }
 
 
 const nextCard = function() {
+    if(isAnimating) return;
+    isAnimating = true;
     cards.forEach(card=> {
         if(card.classList.contains("middle-card")){
             removeAddClass(card, "middle-card", "left-card")    
@@ -132,11 +148,17 @@ const nextCard = function() {
             removeAddClass(card, "left-card", "right-card")
         }
     });
-    index ++;
+    servIndex ++;
     selectorSwitch();
+
+    setTimeout(() => {
+        isAnimating = false;
+    }, 300);
 }
 
 const prevCard = function(){
+    if (isAnimating) return;
+    isAnimating = true;
     cards.forEach(card=> {
         if(card.classList.contains("middle-card")){
             removeAddClass(card, "middle-card", "right-card")    
@@ -148,8 +170,12 @@ const prevCard = function(){
             }, 100);
         }
     });
-    index --;
+    servIndex --;
     selectorSwitch();
+    
+    setTimeout(() => {
+        isAnimating = false;
+    }, 300);
 }
 
 //Click events for arrow buttons 
@@ -202,17 +228,17 @@ let isAnimating = false;
 
 
 //Indicator switching
-let indicatorIndex = 0;
-const indicatorSwitch = function() {
+let testIndex = 0;
+const testSelectorSwitch = function() {
     indicators.forEach(indicator =>{
         indicator.classList.remove("selector-active");
     });
-    if(indicatorIndex >= 3){
-        indicatorIndex = 0;
-    } else if(indicatorIndex <= -1){
-        indicatorIndex = 2;
+    if(testIndex >= 3){
+        testIndex = 0;
+    } else if(testIndex <= -1){
+        testIndex = 2;
     }
-    indicators[indicatorIndex].classList.add("selector-active");
+    indicators[testIndex].classList.add("selector-active");
 }
 
 const nextTestCard = function(){
@@ -232,8 +258,8 @@ testCards.forEach((card) => {
     removeAddClass(card, "test-right", "test-middle");
     }
 });
-indicatorIndex ++;
-indicatorSwitch();
+testIndex ++;
+testSelectorSwitch();
 };
 
 const prevTestCard = function(){
@@ -253,8 +279,8 @@ testCards.forEach((card) => {
     }, 300);
     }
 });
-indicatorIndex --;
-indicatorSwitch();
+testIndex --;
+testSelectorSwitch();
 }
 
 
@@ -286,11 +312,6 @@ prevBtn.addEventListener("click", function () {
 nextBtn.addEventListener("click", function () {
     nextTestCard();
 });
-
-
-
-
-
 
 
 

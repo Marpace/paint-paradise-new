@@ -1,28 +1,33 @@
 .about-heading {
     position: relative;
     z-index: 900;
-    @include responsive($tablet_large){
-        
-        @include flex_centered(row-reverse);
-    }
 
-    .about-heading-img {
+    &-img {
         position: relative;
         height: 400px;
         width: 80%;
         margin: 50px auto;
         border-radius: 15px;
         box-shadow: 13px 13px $light_purple;
-        background-image: url("../../../images/Mahsa-about.png");
+        background-color: $dark_purple;
+        // background-image: url("../../../images/Mahsa-about.png");
+        @include responsive($tablet) {
+            // background-image: url("../../../images/Mahsa-about-2.png");
+        }
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 9000;
     }
-    .about-heading-text {
+    &-text {
         padding: 15px;
+        @include responsive($tablet) {
+            padding: 30px 10%;
+        }
         
-        &-title {
+        &-title h2{
             @include tilt_left;
+            text-align: left;
+            margin-bottom: 10px;
         }
         p{
             font-size: 25px;
@@ -30,7 +35,31 @@
         }
     }
   }
-  .about-heading-text .purple-title {
-    text-align: left;
-    margin-bottom: 10px;
-  }
+
+
+
+@include responsive($desktop){ 
+    .about-heading {
+        @include flex_centered(row-reverse);
+
+        &-img {
+            width: 40%;
+            max-width: 400px;
+            height: 800px;
+            margin: 0 20px;
+            // background-image: url("../../../images/Mahsa-about.png");
+        }
+        &-text {
+            width: 55%;
+            max-width: 552px;
+            padding: 0;
+            margin: 0 20px;
+
+            &-title h2 {
+                font-size: 50px;
+            }
+        }
+    }
+}
+
+

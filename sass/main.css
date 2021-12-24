@@ -110,7 +110,7 @@ html, body {
           align-items: center;
   position: relative;
   height: 400px;
-  margin-bottom: 200px;
+  margin-bottom: 170px;
   background-image: url("../images/services-background.png");
   background-size: cover;
   width: 90%;
@@ -314,7 +314,7 @@ html, body {
   min-width: 320px;
   max-width: 400px;
   width: 80%;
-  margin: auto;
+  margin: 30px auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -475,7 +475,7 @@ html, body {
 .testimonials .testimonial-cards {
   width: 90%;
   height: 250px;
-  margin-bottom: 85px;
+  margin-bottom: 55px;
   position: relative;
 }
 
@@ -1421,7 +1421,43 @@ html, body {
   z-index: 900;
 }
 
-@media only screen and (min-width: 768px) {
+.about-heading-img {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin: 50px auto;
+  border-radius: 15px;
+  -webkit-box-shadow: 13px 13px #ECE1FD;
+          box-shadow: 13px 13px #ECE1FD;
+  background-color: #1D1330;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 9000;
+}
+
+.about-heading-text {
+  padding: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+  .about-heading-text {
+    padding: 30px 10%;
+  }
+}
+
+.about-heading-text-title h2 {
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.about-heading-text p {
+  font-size: 25px;
+  line-height: 1.4;
+}
+
+@media only screen and (min-width: 992px) {
   .about-heading {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1437,58 +1473,90 @@ html, body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .about-heading-img {
+    width: 40%;
+    max-width: 400px;
+    height: 800px;
+    margin: 0 20px;
+  }
+  .about-heading-text {
+    width: 55%;
+    max-width: 552px;
+    padding: 0;
+    margin: 0 20px;
+  }
+  .about-heading-text-title h2 {
+    font-size: 50px;
+  }
 }
 
-.about-heading .about-heading-img {
-  position: relative;
-  height: 400px;
-  width: 80%;
-  margin: 50px auto;
-  border-radius: 15px;
-  -webkit-box-shadow: 13px 13px #ECE1FD;
-          box-shadow: 13px 13px #ECE1FD;
-  background-image: url("../../../images/Mahsa-about.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 9000;
-}
-
-.about-heading .about-heading-text {
+.instagram {
+  height: 475px;
+  margin: 80px 0 30px;
   padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about-heading .about-heading-text-title {
-  -webkit-transform: rotate(-1deg);
-          transform: rotate(-1deg);
-}
-
-.about-heading .about-heading-text p {
-  font-size: 25px;
-  line-height: 1.4;
-}
-
-.about-heading-text .purple-title {
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-.instagram-title h2 {
+.instagram .instagram-title h2 {
   font-size: 28px;
   color: #5B28B5;
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
 }
 
-.instagram-text p {
-  font-size: 25px;
+.instagram .instagram-text {
+  margin: 20px 0;
+  width: 95%;
+  max-width: 992px;
 }
 
-.instagram-carousel {
-  height: 200px;
+.instagram .instagram-text p {
+  font-size: 25px;
+  margin-top: 30px;
+}
+
+.instagram .instagram-carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 330px;
   width: 100%;
 }
 
-.instagram-carousel-inner {
+.instagram .instagram-carousel-inner {
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  width: 88%;
+}
+
+.instagram .instagram-carousel-inner .instagram-carousel-items {
+  left: 0px;
+  height: 100%;
+  position: absolute;
+  width: 790px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1502,13 +1570,20 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
-  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
-.instagram-carousel-inner-item {
+.instagram .instagram-carousel-inner .instagram-carousel-items-item {
   height: 100%;
-  width: 45%;
+  min-width: 150px;
   margin: 0 10px;
   background-color: grey;
+}
+
+.instagram .instagram-carousel-inner .instagram-carousel-items-item:first-child {
+  margin-left: 0;
 }
