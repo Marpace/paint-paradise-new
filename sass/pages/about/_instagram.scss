@@ -33,7 +33,6 @@
                 left: 0px;
                 height: 100%;
                 position: absolute;
-                width: 790px;
                 @include flex_centered(row);
                 justify-content: space-between;
                 transition: .4s;
@@ -42,7 +41,8 @@
                     height: 100%;
                     min-width: 150px;
                     margin: 0 10px;
-                    background-color: grey;
+                    background-size: cover;
+                    border-radius: 10px;
                 }
                 &-item:first-child {
                     margin-left: 0;
@@ -52,41 +52,37 @@
     }
 }
 
-// <section class="instagram">
-//         <div class="instagram-text">
-//             <div class="instagram-title">
-//                 <h2 class="font-medium">Check out her <br>work on instagram</h2>
-//             </div>
-//             <p>@crazy_about_colour</p>
-//         </div>
-//         <div class="instagram-carousel">
-//           <div class="instagram-carousel-inner">
-//             <div class="instagram-carousel-inner-item"></div>
-//             <div class="instagram-carousel-inner-item"></div>
-//             <div class="instagram-carousel-inner-item"></div>
-//             <div class="instagram-carousel-inner-item"></div>
-//             <div class="instagram-carousel-inner-item"></div>
-//           </div>
-//           <div class="controls">
-//             <div class="selectors test-selectors">
-//               <div class="selector-active"></div>
-//               <div></div>
-//               <div></div>
-//               <div></div>
-//               <div></div>
-//             </div>
-//             <div class="arrows">
-//               <div class="arrow-left test-prev-btn">
-//                 <div class="arrow-left-1"></div>
-//                 <div class="arrow-left-2"></div>
-//                 <div class="arrow-left-3"></div>
-//               </div>
-//               <div class="arrow-right test-next-btn">
-//                 <div class="arrow-right-1"></div>
-//                 <div class="arrow-right-2"></div>
-//                 <div class="arrow-right-3"></div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//     </section>
+@include responsive($tablet_large) {
+    .instagram {
+        height: 600px;
+        padding: 0 10%;
+    
+        .instagram-title h2 {
+            font-size: 32px;
+
+            br {
+                display: none;
+            }
+        }
+        .instagram-carousel {
+            height: 330px;
+            @include responsive($desktop_large){
+                height: 380px;
+            }
+            
+            &-inner {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 30px;
+                
+                .instagram-carousel-items-item {
+                    min-width: 250px;        
+                    @include responsive($desktop_large) {
+                        min-width: 300px;
+                    }          
+                }
+            }
+        }
+    }
+}
+

@@ -9,7 +9,7 @@
         .nav-brand {
             height: 60px;
             width: 60px;
-            background-image: url("../images/paint-splatter.png");
+            background-image: url("../images/navigation/paint-splatter.png");
             background-repeat: no-repeat;
             background-size: contain;
         }
@@ -47,6 +47,7 @@
     height: 0px;
     background: $dark_purple;
     transition: .4s;
+    overflow: hidden;
 
     .nav-links {
         padding: 120px 30px;
@@ -139,6 +140,11 @@
 // *********************  MEDIA QUERIES  *******************
 
 @include responsive($tablet) {
+    .current-page{ 
+        position: relative;
+        border-bottom: 3px solid $purple;
+        font-family: "Gotham Medium";
+    }
     .nav-wrap {
       display: flex;
       justify-content: space-between;

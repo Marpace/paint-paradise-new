@@ -9,16 +9,40 @@ const instaCarouselItems = [...document.querySelectorAll(".instagram-carousel-it
 const instagramSelectors = [...document.querySelectorAll(".instagram-selectors div")]
 
 
+// function to populate carousel image divs 
+function populateImg(){
+    let n = 1;
+    instaCarouselItems.forEach(item => {
+        item.style.backgroundImage = `url("../../../images/about/instagram-carousel/insta-${n}.jpg")`
+        n += 1;
+    });
+}
+
+populateImg();
+
+
+
 //INSTAGRAM CAROUSEL 
 
 let position = 0;
 function changePosition(direction) {
     if(direction === "prev") {
         if(position >= 0) return;
-        else position += 170;       
+        else {
+            if(screen.width < 768) position += 170;
+            else if (screen.width < 1200) position += 270;  
+            else position += 320;     
+        }
     } else if(direction === "next") {
-        if(position <= -511) return;
-        else position -= 170;
+        if(screen.width < 768 && position <= -511) return;
+        else if(screen.width < 1200 && position <= -1080) return;
+        else if(screen.width >= 1200 && position <= -1280) return;
+        
+        else {
+            if(screen.width < 768) position -= 170;
+            else if (screen.width < 1200) position -= 270;
+            else position -= 320;       
+        }
     }
 }
 
@@ -57,4 +81,3 @@ function selectorSwitch(direction) {
     });
 }
 
-console.log(getComputedStyle(instaCarouselItems[0]).marginLeft)
