@@ -13,7 +13,7 @@ const instagramSelectors = [...document.querySelectorAll(".instagram-selectors d
 function populateImg(){
     let n = 1;
     instaCarouselItems.forEach(item => {
-        item.style.backgroundImage = `url("../../../images/about/instagram-carousel/insta-${n}.jpg")`
+        item.style.backgroundImage = `url("../images/about/instagram-carousel/insta-${n}.jpg")`
         n += 1;
     });
 }

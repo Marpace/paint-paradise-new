@@ -1635,6 +1635,7 @@ html, body {
 }
 
 .gallery-grid {
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1653,7 +1654,6 @@ html, body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 90%;
   margin: 100px auto;
 }
 
@@ -1661,7 +1661,7 @@ html, body {
   -webkit-box-flex: 43%;
       -ms-flex: 43%;
           flex: 43%;
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 @media only screen and (min-width: 768px) {

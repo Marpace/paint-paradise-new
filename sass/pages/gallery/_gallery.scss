@@ -1,15 +1,15 @@
 .gallery-grid {
+    width: 95%;
     @include flex_centered(row);
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 90%;
     margin: 100px auto;
     .column {
         flex: 43%;
         @include responsive($tablet_large){
             flex: 30%;        
         }
-        margin: 0 10px;
+        margin: 0 5px;
 
         &-item {
             background: grey;
