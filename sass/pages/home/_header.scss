@@ -1,6 +1,8 @@
 
 .heading {
     height: 600px;
+    position: relative;
+    z-index: 800;
 
     .heading-wrap {
         position: relative;
@@ -9,7 +11,6 @@
         display: flex;
         flex-direction: column;
         padding: 50px 0;
-        z-index: 800;
 
         .wave {
             position: absolute;
@@ -25,7 +26,7 @@
         }
         
         .heading-left {
-            z-index: 1000;
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,7 +42,6 @@
                 }
             }
             .heading-text {
-                z-index: 1000;
                 width: 70%;
                 text-align: center;
                 margin: 0 0 35px;
@@ -51,7 +51,6 @@
                 line-height: 1.4;
             }
             .heading-button {
-                z-index: 1000;
                 width: 100%;
                 text-align: center;
                 margin: 30px 0 0 0 ;
@@ -95,7 +94,6 @@
                 display: flex;
                 width: 50%;
                 height: 100%;
-                z-index: 1000;
 
                 img {
                     position: absolute;

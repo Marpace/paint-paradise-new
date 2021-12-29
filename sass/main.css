@@ -752,7 +752,7 @@ html, body {
   overflow: hidden;
   -webkit-transition: .5s;
   transition: .5s;
-  z-index: 1001;
+  z-index: 1000;
 }
 
 .collapsed-nav .nav-links .nav-link .drop-down-menu .menu-divider {
@@ -850,7 +850,6 @@ html, body {
             justify-content: space-between;
     padding: 0 30px;
     position: relative;
-    z-index: 1000;
   }
   .nav-wrap .purple-title {
     font-size: 2.3rem;
@@ -870,6 +869,7 @@ html, body {
             align-items: center;
     height: 100px;
     background: white;
+    overflow: visible;
   }
   .nav-wrap .collapsed-nav .nav-links {
     display: -webkit-box;
@@ -880,6 +880,8 @@ html, body {
   }
   .nav-wrap .collapsed-nav .nav-links .nav-link {
     margin: 0 20px;
+    position: relative;
+    z-index: 1000;
   }
   .nav-wrap .collapsed-nav .nav-links .nav-link a {
     font-size: 20px;
@@ -910,12 +912,13 @@ html, body {
         -ms-flex-pack: end;
             justify-content: flex-end;
     position: absolute;
-    top: 25px;
+    top: 31px;
     left: -80px;
     height: 0px;
     width: 260px;
     background-color: white;
     border-radius: 0 0 10px 10px;
+    z-index: 999;
   }
   .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link {
     margin: 10px 0;
@@ -1103,6 +1106,8 @@ html, body {
 
 .heading {
   height: 600px;
+  position: relative;
+  z-index: 800;
 }
 
 .heading .heading-wrap {
@@ -1117,7 +1122,6 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 50px 0;
-  z-index: 800;
 }
 
 .heading .heading-wrap .wave {
@@ -1134,7 +1138,7 @@ html, body {
 }
 
 .heading .heading-wrap .heading-left {
-  z-index: 1000;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1164,7 +1168,6 @@ html, body {
 }
 
 .heading .heading-wrap .heading-left .heading-text {
-  z-index: 1000;
   width: 70%;
   text-align: center;
   margin: 0 0 35px;
@@ -1176,7 +1179,6 @@ html, body {
 }
 
 .heading .heading-wrap .heading-left .heading-button {
-  z-index: 1000;
   width: 100%;
   text-align: center;
   margin: 30px 0 0 0;
@@ -1223,7 +1225,6 @@ html, body {
     display: flex;
     width: 50%;
     height: 100%;
-    z-index: 1000;
   }
   .heading .heading-wrap .heading-right img {
     position: absolute;
@@ -1438,7 +1439,6 @@ html, body {
   background-color: #1D1330;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 9000;
 }
 
 .about-heading-text {
@@ -1631,5 +1631,106 @@ html, body {
 @media only screen and (min-width: 768px) and (min-width: 1200px) {
   .instagram .instagram-carousel-inner .instagram-carousel-items-item {
     min-width: 300px;
+  }
+}
+
+.gallery-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90%;
+  margin: 100px auto;
+}
+
+.gallery-grid .column {
+  -webkit-box-flex: 43%;
+      -ms-flex: 43%;
+          flex: 43%;
+  margin: 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .gallery-grid .column {
+    -webkit-box-flex: 30%;
+        -ms-flex: 30%;
+            flex: 30%;
+  }
+}
+
+.gallery-grid .column-item {
+  background: grey;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.gallery-grid .column .gallery-xs {
+  height: 100px;
+}
+
+.gallery-grid .column .gallery-s {
+  height: 150px;
+}
+
+.gallery-grid .column .gallery-m {
+  height: 200px;
+}
+
+.gallery-grid .column .gallery-l {
+  height: 300px;
+}
+
+.gallery-grid .column .gallery-xl {
+  height: 400px;
+}
+
+@media only screen and (min-width: 600px) {
+  .gallery-grid .column .gallery-xs {
+    height: 200px;
+  }
+  .gallery-grid .column .gallery-s {
+    height: 250px;
+  }
+  .gallery-grid .column .gallery-m {
+    height: 300px;
+  }
+  .gallery-grid .column .gallery-l {
+    height: 400px;
+  }
+  .gallery-grid .column .gallery-xl {
+    height: 500px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .gallery-grid .column .gallery-xs {
+    height: 200px;
+  }
+  .gallery-grid .column .gallery-s {
+    height: 250px;
+  }
+  .gallery-grid .column .gallery-m {
+    height: 300px;
+  }
+  .gallery-grid .column .gallery-l {
+    height: 400px;
+  }
+  .gallery-grid .column .gallery-xl {
+    height: 500px;
   }
 }
