@@ -9,9 +9,10 @@
         .nav-brand {
             height: 60px;
             width: 60px;
-            background-image: url("../images/navigation/paint-splatter.png");
-            background-repeat: no-repeat;
-            background-size: contain;
+
+            img {
+                width: 100%;
+            }
         }
         h3 {
             display: none;

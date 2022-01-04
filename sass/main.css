@@ -657,9 +657,10 @@ html, body {
 .navbar .logo .nav-brand {
   height: 60px;
   width: 60px;
-  background-image: url("../images/navigation/paint-splatter.png");
-  background-repeat: no-repeat;
-  background-size: contain;
+}
+
+.navbar .logo .nav-brand img {
+  width: 100%;
 }
 
 .navbar .logo h3 {
