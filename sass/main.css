@@ -1586,7 +1586,7 @@ html, body {
 
 .instagram .instagram-carousel-inner .instagram-carousel-items-item {
   height: 100%;
-  min-width: 150px;
+  width: 150px;
   margin: 0 10px;
   background-size: cover;
   border-radius: 10px;
