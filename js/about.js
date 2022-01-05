@@ -10,15 +10,15 @@ const instagramSelectors = [...document.querySelectorAll(".instagram-selectors d
 
 
 // function to populate carousel image divs 
-function populateImg(){
-    let n = 1;
-    instaCarouselItems.forEach(item => {
-        item.style.backgroundImage = `url("../images/about/instagram-carousel/insta-${n}.jpg")`
-        n += 1;
-    });
-}
+// function populateImg(){
+//     let n = 1;
+//     instaCarouselItems.forEach(item => {
+//         item.style.backgroundImage = `url("../images/about/instagram-carousel/insta-${n}.jpg")`
+//         n += 1;
+//     });
+// }
 
-populateImg();
+// populateImg();
 
 
 

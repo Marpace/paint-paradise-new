@@ -43,6 +43,11 @@
                     margin: 0 10px;
                     background-size: cover;
                     border-radius: 10px;
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
                 &-item:first-child {
                     margin-left: 0;
@@ -75,7 +80,7 @@
                 width: 100%;
                 margin-bottom: 30px;
                 
-                .instagram-carousel-items-item {
+                .instagram-carousel-items-item{
                     min-width: 250px;        
                     @include responsive($desktop_large) {
                         min-width: 300px;

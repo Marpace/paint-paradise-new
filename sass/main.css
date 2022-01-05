@@ -1592,6 +1592,12 @@ html, body {
   border-radius: 10px;
 }
 
+.instagram .instagram-carousel-inner .instagram-carousel-items-item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .instagram .instagram-carousel-inner .instagram-carousel-items-item:first-child {
   margin-left: 0;
 }
