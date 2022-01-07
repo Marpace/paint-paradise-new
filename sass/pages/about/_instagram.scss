@@ -11,7 +11,7 @@
     }
     .instagram-text {
         margin: 20px 0;
-        width: 95%;
+        width: 100%;
         max-width: 992px;
         p {
         font-size: 25px;
@@ -27,7 +27,8 @@
             position: relative;
             overflow: hidden;
             height: 150px;
-            width: 88%;
+            width: 100%;
+            max-width: 992px;
             
             .instagram-carousel-items {
                 left: 0px;
@@ -54,6 +55,12 @@
                 }
             }
         }
+    }
+}
+
+@include responsive($tablet){
+    .instagram {
+        padding: 0 10%;
     }
 }
 

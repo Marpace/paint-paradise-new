@@ -104,8 +104,10 @@
                 height: 495px;
                 margin-bottom: 0;
                 @include responsive($desktop_large){
-                    width: 400px;
-                    height: 550px;
+                    width: 500px;
+                    height: 650px;
+                    // margin-bottom: 50px;
+
                 }
 
                 .services-card {
@@ -115,8 +117,9 @@
                     align-items: flex-start;
                     padding: 30px 40px 20px 60px;
                     @include responsive($desktop_large) {
-                        top: 150px;
-                        width: 550px;
+                        top: 170px;
+                        width: 600px;
+                        height: 350px;
                     }
 
                     .card-title h2 {
@@ -128,6 +131,7 @@
                         line-height: 1.4;
                         margin-bottom: 15px;
                         @include responsive($desktop_large) {
+                            font-size: 22px;
                             line-height: 1.5;
                         }
                     }

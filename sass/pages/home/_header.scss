@@ -46,7 +46,7 @@
                 text-align: center;
                 margin: 0 0 35px;
             }
-            .heading-text p {
+            .heading-text h4 {
                 font-size: 23px;
                 line-height: 1.4;
             }
@@ -130,15 +130,18 @@
                     }
                 }
             }
-            .heading-img-1 img {
-                left: -140px;
-                width: 330px;
+            .heading-right {
+
+                .heading-img-1 img {
+                    left: -140px;
+                    width: 330px;
+                }
+                .heading-img-2 img {
+                    top: 70px;
+                    left: 220px;
+                    width: 120px;
+                } 
             }
-            .heading-img-2 img {
-                top: 70px;
-                left: 220px;
-                width: 110px;
-            } 
         }
     }
 }

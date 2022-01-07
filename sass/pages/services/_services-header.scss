@@ -1,0 +1,16 @@
+.services-header {
+    height: 500px;
+    
+    &-text {
+        background-color: $light_purple;
+        padding: 20px;
+        position: relative;
+
+        &-title {
+            @include tilt_left;
+        }
+    }
+    &-image {
+        display: none;
+    }
+}

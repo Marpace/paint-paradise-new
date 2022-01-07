@@ -175,6 +175,9 @@
 
                 .nav-link {
                     margin: 0 20px;
+                    @include responsive($desktop_large){
+                        margin: 0 40px;
+                    }
                     position: relative;
                     z-index: 1000;
 
@@ -189,7 +192,6 @@
                 #services-drop-down {
                     position: relative;
                     
-                    
                     i {
                         color: $dark_purple;
                     }
@@ -198,29 +200,33 @@
                         justify-content: flex-end;
                         position: absolute;
                         top: 31px;
-                        left: -80px;
+                        left: -130px;
                         height: 0px;
-                        width: 260px;
+                        width: 360px;
                         background-color: white;
                         border-radius: 0 0 10px 10px;
                         z-index: 999;
 
-                        .drop-down-link {
-                            margin: 10px 0;
+                        .drop-down-link-wrap {
+                            width: 80%;
+                        
+                            .drop-down-link {
+                                margin: 10px 0;
 
-                            .drop-down-icon {
-                                margin: 10px 10px 10px 0;
-                            } 
-                            h3 {
-                                color: black;
-                                font-weight: normal;
+                                .drop-down-icon {
+                                    margin: 10px 10px 10px 0;
+                                } 
+                                h3 {
+                                    color: black;
+                                    font-weight: normal;
+                                }
                             }
-                        }
-                        .menu-divider {
-                            display: block;
-                            height: 1px;
-                            background-color: rgba(128, 128, 128, 0.2);
-                            border: none;
+                            .menu-divider {
+                                display: block;
+                                height: 1px;
+                                background-color: rgba(128, 128, 128, 0.2);
+                                border: none;
+                            }
                         }
                     }
                 }
@@ -252,3 +258,5 @@
         padding: 0 12%;
     }
 }
+
+

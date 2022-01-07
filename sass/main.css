@@ -50,15 +50,31 @@ html, body {
 }
 
 .purple-title {
-  font-size: 2.1rem;
   font-family: "Gotham Ultra";
   color: #5B28B5;
   text-align: center;
   margin: 0 0 30px 0;
+  font-size: 2.1rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .purple-title {
+    font-size: 2.9rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .purple-title {
+    font-size: 3.3rem;
+  }
 }
 
 .font-medium {
   font-family: "Gotham Medium";
+}
+
+a {
+  text-decoration: none;
 }
 
 .services {
@@ -242,8 +258,8 @@ html, body {
 
 @media only screen and (min-width: 992px) and (min-width: 1200px) {
   .services .services-wrap .services-background {
-    width: 400px;
-    height: 550px;
+    width: 500px;
+    height: 650px;
   }
 }
 
@@ -261,8 +277,9 @@ html, body {
 
 @media only screen and (min-width: 992px) and (min-width: 1200px) {
   .services .services-wrap .services-background .services-card {
-    top: 150px;
-    width: 550px;
+    top: 170px;
+    width: 600px;
+    height: 350px;
   }
 }
 
@@ -280,6 +297,7 @@ html, body {
 
 @media only screen and (min-width: 992px) and (min-width: 1200px) {
   .services .services-wrap .services-background .services-card .service-card-text p {
+    font-size: 22px;
     line-height: 1.5;
   }
 }
@@ -320,7 +338,7 @@ html, body {
 @media only screen and (min-width: 768px) {
   .controls {
     width: 400px;
-    margin: 0 30px 0;
+    margin: 30px 30px 0;
   }
 }
 
@@ -470,6 +488,7 @@ html, body {
 .testimonials .testimonials-title {
   -webkit-transform: rotate(1deg);
           transform: rotate(1deg);
+  margin: 150px 0 50px;
 }
 
 .testimonials .testimonial-cards {
@@ -884,6 +903,15 @@ html, body {
     position: relative;
     z-index: 1000;
   }
+}
+
+@media only screen and (min-width: 600px) and (min-width: 1200px) {
+  .nav-wrap .collapsed-nav .nav-links .nav-link {
+    margin: 0 40px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .nav-wrap .collapsed-nav .nav-links .nav-link a {
     font-size: 20px;
     font-weight: normal;
@@ -914,24 +942,27 @@ html, body {
             justify-content: flex-end;
     position: absolute;
     top: 31px;
-    left: -80px;
+    left: -130px;
     height: 0px;
-    width: 260px;
+    width: 360px;
     background-color: white;
     border-radius: 0 0 10px 10px;
     z-index: 999;
   }
-  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link {
+  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link-wrap {
+    width: 80%;
+  }
+  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link-wrap .drop-down-link {
     margin: 10px 0;
   }
-  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link .drop-down-icon {
+  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link-wrap .drop-down-link .drop-down-icon {
     margin: 10px 10px 10px 0;
   }
-  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link h3 {
+  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link-wrap .drop-down-link h3 {
     color: black;
     font-weight: normal;
   }
-  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .menu-divider {
+  .nav-wrap .collapsed-nav .nav-links #services-drop-down .drop-down-menu .drop-down-link-wrap .menu-divider {
     display: block;
     height: 1px;
     background-color: rgba(128, 128, 128, 0.2);
@@ -1174,7 +1205,7 @@ html, body {
   margin: 0 0 35px;
 }
 
-.heading .heading-wrap .heading-left .heading-text p {
+.heading .heading-wrap .heading-left .heading-text h4 {
   font-size: 23px;
   line-height: 1.4;
 }
@@ -1259,14 +1290,14 @@ html, body {
   .heading .heading-wrap .heading-left .heading-title h1 {
     font-size: 3.4rem;
   }
-  .heading .heading-wrap .heading-img-1 img {
+  .heading .heading-wrap .heading-right .heading-img-1 img {
     left: -140px;
     width: 330px;
   }
-  .heading .heading-wrap .heading-img-2 img {
+  .heading .heading-wrap .heading-right .heading-img-2 img {
     top: 70px;
     left: 220px;
-    width: 110px;
+    width: 120px;
   }
 }
 
@@ -1424,6 +1455,25 @@ html, body {
   width: 100%;
 }
 
+.services-header {
+  height: 500px;
+}
+
+.services-header-text {
+  background-color: #ECE1FD;
+  padding: 20px;
+  position: relative;
+}
+
+.services-header-text-title {
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.services-header-image {
+  display: none;
+}
+
 .about-heading {
   position: relative;
   z-index: 900;
@@ -1526,7 +1576,7 @@ html, body {
 
 .instagram .instagram-text {
   margin: 20px 0;
-  width: 95%;
+  width: 100%;
   max-width: 992px;
 }
 
@@ -1557,7 +1607,8 @@ html, body {
   position: relative;
   overflow: hidden;
   height: 150px;
-  width: 88%;
+  width: 100%;
+  max-width: 992px;
 }
 
 .instagram .instagram-carousel-inner .instagram-carousel-items {
@@ -1600,6 +1651,12 @@ html, body {
 
 .instagram .instagram-carousel-inner .instagram-carousel-items-item:first-child {
   margin-left: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  .instagram {
+    padding: 0 10%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
